@@ -1,0 +1,56 @@
+{
+	"Description":
+	{
+		"Namespace": "Geometry",
+		"Operation": "RectangleArea",
+		"Synopsis": "Solve for the area of a rectangle:  Area = Width * Height"
+	},
+
+	"Inputs": 
+	{
+		"Width": { "Hash":"Width", "Type":"Number" },
+		"Height": { "Hash":"Height", "Type":"Number" }
+	},
+
+	"Outputs":
+	{
+		"Area": { "Hash":"Area", "Name": "Area of the Rectangle"},
+		"Ratio": { "Hash":"Ratio", "Name": "The Ratio between the Width and the Height" }
+	},
+	
+	"Log":
+	{
+		"PreOperation": "Solve for [ {{Name:Area}} ] based on [ {{Name:Width}} ] and [ {{Name:Height}} ].",
+		"PostOperation": "Operation complete; [ {{Name:Area}} ] = {{InputValue:Width}} * {{InputValue:Height}} = {{OutputValue:Area}}"
+	},
+
+	"Steps":
+	[
+		{
+			"Namespace": "Math",
+			"Instruction": "multiply",
+			"InputHashAddressMap": 
+				{
+					"a": "Width",
+					"b": "Height"
+				},
+			"OutputHashAddressMap":
+				{
+					"x": "Area"
+				}
+		},
+		{
+			"Namespace": "Math",
+			"Instruction": "divide",
+			"InputHashAddressMap": 
+				{
+					"a": "Width",
+					"b": "Height"
+				},
+			"OutputHashAddressMap":
+				{
+					"x": "Ratio"
+				}
+		}
+	]
+}

@@ -1,0 +1,33 @@
+{
+	"Description":
+	{
+		"Namespace": "Math",
+		"Operation": "Divide",
+		"Synopsis": "Divide two numbers:  x = a / b"
+	},
+
+	"Inputs": 
+	{
+		"a": { "Hash": "a", "Type": "Number" },
+		"b": { "Hash": "b", "Type": "Number" }
+	},
+
+	"Outputs":
+	{
+		"x": { "Hash": "x", "Type": "Number" }
+	},
+	
+	"Log":
+	{
+		"PreOperation": "Divide {{Name:a}} over {{Name:b}}, storing the value in {{Name:x}}.",
+		"PostOperation": "Operation complete: {{Name:x}} = {{InputValue:a}} / {{InputValue:b}} = {{OutputValue:x}}"		
+	},
+
+	"Steps":
+	[
+		{
+			"Namespace": "Math",
+			"Instruction": "divide"
+		}
+	]
+}

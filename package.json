@@ -1,0 +1,67 @@
+{
+  "name": "elucidator",
+  "version": "1.0.0",
+  "description": "Elucidator solver service and API.",
+  "main": "source/elucidator.js",
+  "scripts": {
+    "start": "node source/elucidator.js",
+    "coverage": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -u tdd -R spec",
+    "test": "./node_modules/mocha/bin/_mocha -u tdd -R spec",
+    "build": "./node_modules/.bin/gulp build",
+    "docker-dev-build-image": "docker build ./ -t retold/elucidator:local",
+    "docker-dev-run": "docker run -it -d --name elucidator-dev -p 12333:8080 -p 5500:5500 -v \"$PWD/.config:/home/coder/.config\"  -v \"$PWD:/home/coder/elucidator\" -u \"$(id -u):$(id -g)\" -e \"DOCKER_USER=$USER\" retold/elucidator:local"
+  },
+  "mocha": {
+    "diff": true,
+    "extension": [
+      "js"
+    ],
+    "package": "./package.json",
+    "reporter": "spec",
+    "slow": "75",
+    "timeout": "5000",
+    "ui": "tdd",
+    "watch-files": [
+      "source/**/*.js",
+      "test/**/*.js"
+    ],
+    "watch-ignore": [
+      "lib/vendor"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://stevenvelozo@github.com/stevenvelozo/elucidator.git"
+  },
+  "author": "steven velozo <steven@velozo.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stevenvelozo/elucidator/issues"
+  },
+  "homepage": "https://github.com/stevenvelozo/elucidator#readme",
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "@testing-library/dom": "^8.13.0",
+    "async": "^3.2.3",
+    "browserify": "^17.0.0",
+    "chai": "4.3.6",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-buble": "^0.9.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.1.0",
+    "gulp-util": "^3.0.8",
+    "jsdom": "^19.0.0",
+    "mocha": "9.2.2",
+    "npm-check-updates": "^12.5.9",
+    "nyc": "^15.1.0",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "decimal.js": "^10.4.2",
+    "manyfest": "^1.0.6",
+    "precedent": "^1.0.6"
+  }
+}

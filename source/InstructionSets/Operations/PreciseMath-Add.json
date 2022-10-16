@@ -1,0 +1,33 @@
+{
+	"Description":
+	{
+		"Namespace": "PreciseMath",
+		"Operation": "Add",
+		"Synopsis": "Precisely add two numbers:  x = a + b"
+	},
+
+	"Inputs": 
+	{
+		"a": { "Hash": "a", "Type": "Number" },
+		"b": { "Hash": "b", "Type": "Number" }
+	},
+
+	"Outputs":
+	{
+		"x": { "Hash": "x", "Type": "Number" }
+	},
+	
+	"Log":
+	{
+		"PreOperation": "Add {{Name:a}} and {{Name:b}}, storing the value in {{Name:x}}.",
+		"PostOperation": "Operation complete: {{Name:x}} = {{InputValue:a}} + {{InputValue:b}} = {{OutputValue:x}}"		
+	},
+
+	"Steps":
+	[
+		{
+			"Namespace": "PreciseMath",
+			"Instruction": "add"
+		}
+	]
+}
