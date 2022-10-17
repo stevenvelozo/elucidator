@@ -58,13 +58,28 @@ class Elucidator
 		// The abstract geometry instructions and operations
 		// These provide the "Geometry" namespace
 		this.loadInstructionSet(require(`./InstructionSets/Geometry.js`));
+
+		// The logic namespace (if, execution of instructions, etc.)
+		// These provide the "Logic" namespace
+		this.loadInstructionSet(require(`./InstructionSets/Logic.js`));
+	}
+
+	operationExists(pNamespace, pOperationHash)
+	{
+		if ((typeof(pNamespace) != 'string') || (typeof(pOperationHash) != 'string'))
+		{
+			return false;
+		}
+
+		let tmpNamespace = pNamespace.toLowerCase();
+		return (this.operationSets.hasOwnProperty(tmpNamespace) && this.operationSets[tmpNamespace].hasOwnProperty(pOperationHash.toLowerCase()));
 	}
 
 	addOperation(pNamespace, pOperationHash, pOperation)
 	{
         if (typeof(pNamespace) != 'string')
         {
-            this.elucidator.logError(`Attempted to add an operation at runtime via Elucidator.addOperation with an invalid namespace; expected a string but the type was ${typeof(pNamespace)}`, pOperation);
+            this.logError(`Attempted to add an operation at runtime via Elucidator.addOperation with an invalid namespace; expected a string but the type was ${typeof(pNamespace)}`, pOperation);
             return false;
         }
 
@@ -76,6 +91,12 @@ class Elucidator
 
 	solveInternalOperation(pNamespace, pOperationHash, pInputObject, pOutputObject, pDescriptionManyfest, pInputAddressMapping, pOutputAddressMapping, pSolutionContext)
 	{
+		if (!this.operationExists(pNamespace, pOperationHash))
+		{
+			this.logError(`Attempted to solveInternalOperation for namespace ${pNamespace} operationHash ${pOperationHash} but the operation was not found.`);
+			// TODO: Should this return something with an error log populated?
+			return false;
+		}
 		let tmpOperation = this.operationSets[pNamespace.toLowerCase()][pOperationHash.toLowerCase()];
 		return this.solveOperation(tmpOperation, pInputObject, pOutputObject, pDescriptionManyfest, pInputAddressMapping, pOutputAddressMapping, pSolutionContext);
 	}
@@ -83,16 +104,6 @@ class Elucidator
 	solveOperation(pOperationObject, pInputObject, pOutputObject, pDescriptionManyfest, pInputAddressMapping, pOutputAddressMapping, pSolutionContext)
 	{
 		let tmpOperation = JSON.parse(JSON.stringify(pOperationObject));
-
-		// Now that the operation object has been created uniquely, apply any passed-in address-hash remappings
-		if (pInputAddressMapping)
-		{
-			tmpDescriptionManyfest.schemaManipulations.resolveAddressMappings(tmpOperation.Inputs, pInputAddressMapping);
-		}
-		if (pOutputAddressMapping)
-		{
-			tmpDescriptionManyfest.schemaManipulations.resolveAddressMappings(tmpOperation.Inputs, pOutputAddressMapping);
-		}
 
 		if (typeof(pInputObject) != 'object')
 		{
@@ -179,6 +190,15 @@ class Elucidator
 		{
 			// Clone the passed-in manyfest, so mutations do not alter the upstream version
 			tmpDescriptionManyfest = pDescriptionManyfest.clone();
+		}
+		// Now that the operation object has been created uniquely, apply any passed-in address-hash and hash-hash remappings
+		if (pInputAddressMapping)
+		{
+			tmpDescriptionManyfest.schemaManipulations.resolveAddressMappings(tmpOperation.Inputs, pInputAddressMapping);
+		}
+		if (pOutputAddressMapping)
+		{
+			tmpDescriptionManyfest.schemaManipulations.resolveAddressMappings(tmpOperation.Inputs, pOutputAddressMapping);
 		}
 		if (tmpSolutionContext.InputHashMapping)
 		{
@@ -291,6 +311,8 @@ class Elucidator
 					Operation: tmpOperation,
 
 					SolutionContext: tmpSolutionContext,
+
+					DescriptionManyfest: tmpDescriptionManyfest,
 
 					InputObject: tmpInputObject,
 					InputManyfest: tmpInputManyfest,

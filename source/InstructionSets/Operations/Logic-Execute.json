@@ -1,0 +1,32 @@
+{
+	"Description":
+	{
+		"Namespace": "Logic",
+		"Operation": "Execute",
+		"Synopsis": "Execute an operation based on namespace and operation."
+	},
+
+	"Inputs": 
+	{
+		"namespace": { "Hash": "namespace", "Type": "string", "Default":"logic" },
+		"operation": { "Hash": "operation", "Type": "string", "Default":"noop" }
+	},
+
+	"Outputs":
+	{
+	},
+	
+	"Log":
+	{
+		"PreOperation": "Execute the {{InputValue:operation}} operation in namespace {{InputValue:namespace}}.",
+		"PostOperation": "Operation [{{InputValue:namespace}}:{{InputValue:operation}}] execution complete."
+	},
+
+	"Steps":
+	[
+		{
+			"Namespace": "Logic",
+			"Instruction": "execute"
+		}
+	]
+}

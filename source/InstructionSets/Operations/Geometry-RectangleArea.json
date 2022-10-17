@@ -27,7 +27,7 @@
 	"Steps":
 	[
 		{
-			"Namespace": "Math",
+			"Namespace": "PreciseMath",
 			"Instruction": "multiply",
 			"InputHashAddressMap": 
 				{
@@ -40,7 +40,7 @@
 				}
 		},
 		{
-			"Namespace": "Math",
+			"Namespace": "PreciseMath",
 			"Instruction": "divide",
 			"InputHashAddressMap": 
 				{

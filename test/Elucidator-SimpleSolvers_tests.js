@@ -121,7 +121,7 @@ suite
 						// This should make us the best prime number.  Fight me.
 						Expect(tmpData.x).to.equal(410);
 						Expect(tmpSolverResults.SolutionLog[0]).to.equal('Aggregate all numeric values in a, storing the resultant in x.');
-						Expect(tmpSolverResults.SolutionLog[2]).to.equal('[ERROR][Operation Math:Aggregate - Step #0:Math:aggregate] Object property Cuvee] could not be parsed as a number; skipping.  (THIS IS NOT A NUMBER)');
+						Expect(tmpSolverResults.SolutionLog[2]).to.equal('[ERROR][Operation Math:Aggregate - Step #0:Math:aggregate] Object property [Cuvee] could not be parsed as a number; skipping.  (THIS IS NOT A NUMBER)');
 						fTestComplete();
 					}
 				);

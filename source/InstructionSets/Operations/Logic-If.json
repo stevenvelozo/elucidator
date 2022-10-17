@@ -1,0 +1,40 @@
+{
+	"Description":
+	{
+		"Namespace": "Logic",
+		"Operation": "If",
+		"Synopsis": "Comparison-based if of leftValue and RightValue based on comparator.  Executes trueNamespace:trueOperation or falseNamespace:falseOperation based on truthiness of result.  Also outputs a true or false to truthinessResult."
+	},
+
+	"Inputs": 
+	{
+		"leftValue": { "Hash":"leftValue", "Type":"Any" },
+		"rightValue": { "Hash":"rightValue", "Type":"Any", "Default": true },
+		"comparator": { "Hash":"comparator", "Type":"String", "Default":"==" },
+
+		"trueNamespace": {"Hash":"trueNamespace", "Type":"String", "Default":"logic" },
+		"trueOperation": {"Hash":"trueOperation", "Type":"String", "Default":"noop" },
+
+		"falseNamespace": {"Hash":"falseNamespace", "Type":"String", "Default":"logic" },
+		"falseOperation": {"Hash":"falseOperation", "Type":"String", "Default":"noop" }
+	},
+
+	"Outputs":
+	{
+		"truthinessResult": { "Hash": "truthinessResult", "Type": "Boolean" }
+	},
+	
+	"Log":
+	{
+		"PreOperation": "Compare {{Name:leftValue}} and {{Name:rightValue}} with the {{InputValue:comparator}} operator, storing the truthiness in {{Name:truthinessResult}}.",
+		"PostOperation": "Operation complete: {{InputValue:leftValue}} {{InputValue:comparator}} {{InputValue:rightValue}} evaluated to {{OutputValue:truthinessResult}}"
+	},
+
+	"Steps":
+	[
+		{
+			"Namespace": "Logic",
+			"Instruction": "If"
+		}
+	]
+}
