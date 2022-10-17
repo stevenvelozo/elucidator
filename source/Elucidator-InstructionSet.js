@@ -18,8 +18,12 @@ class ElucidatorInstructionSet
     }
 
     // Create an empty namespace for instructions and operations if either one doesn't exist
-    initializeNamespace()
+    initializeNamespace(pNamespace)
     {
+        if (typeof(pNamespace) == 'string')
+        {
+            this.namespace = pNamespace;
+        }
         if (!this.elucidator.instructionSets.hasOwnProperty(this.namespace))
         {
             this.elucidator.instructionSets[this.namespace.toLowerCase()] = {};
@@ -147,7 +151,7 @@ class ElucidatorInstructionSet
         }
 
 
-        this.elucidator.operationSets[this.namespace.toLowerCase()][pOperationHash] = pOperation;
+        this.elucidator.operationSets[this.namespace.toLowerCase()][pOperationHash.toLowerCase()] = pOperation;
         return true;
     }
 

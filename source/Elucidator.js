@@ -6,6 +6,8 @@ const libSimpleLog = require('./Elucidator-LogToConsole.js');
 const libManyfest = require('manyfest');
 const libPrecedent = require('precedent');
 
+const libElucidatorInstructionSet = require('./Elucidator-InstructionSet.js');
+
 /**
 * Elucidator object address-based descriptions and manipulations.
 *
@@ -58,7 +60,20 @@ class Elucidator
 		this.loadInstructionSet(require(`./InstructionSets/Geometry.js`));
 	}
 
-	//
+	addOperation(pNamespace, pOperationHash, pOperation)
+	{
+        if (typeof(pNamespace) != 'string')
+        {
+            this.elucidator.logError(`Attempted to add an operation at runtime via Elucidator.addOperation with an invalid namespace; expected a string but the type was ${typeof(pNamespace)}`, pOperation);
+            return false;
+        }
+
+		let tmpOperationInjector = new libElucidatorInstructionSet(this);
+		tmpOperationInjector.initializeNamespace(pNamespace);
+
+		return tmpOperationInjector.addOperation(pOperationHash, pOperation);
+	}
+
 	solveInternalOperation(pNamespace, pOperationHash, pInputObject, pOutputObject, pDescriptionManyfest, pInputAddressMapping, pOutputAddressMapping, pSolutionContext)
 	{
 		let tmpOperation = this.operationSets[pNamespace.toLowerCase()][pOperationHash.toLowerCase()];

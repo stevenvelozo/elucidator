@@ -306,8 +306,9 @@ suite
 										}
 									]
 								});
-						let tmpOperationOutput = _Elucidator.solveOperation(tmpBillSolution, tmpData, tmpData, tmpDescriptionManyfest);
-						Expect(tmpData.MealCost).to.equal(1010);
+						let tmpOperationOutput = _Elucidator.solveOperation(tmpBillSolution, tmpData);
+						Expect(tmpData.MealCost).to.equal(1123);
+						Expect(tmpOperationOutput.SolutionLog[0]).to.equal("Add [ DinnerTotal ] and [ DrinksTotal ], storing the value in [ MealCost ].");
 						fTestComplete();
 					}
 				);
