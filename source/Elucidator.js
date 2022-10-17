@@ -263,7 +263,10 @@ class Elucidator
 				// Perform step-specific address mappings.
 				tmpDescriptionManyfest.schemaManipulations.resolveAddressMappings(tmpInputSchema.Descriptors, tmpStep.InputHashAddressMap);
 				let tmpInputManyfest = new libManyfest(tmpInputSchema);
-				tmpInputManyfest.hashTranslations.addTranslation(tmpSolutionContext.InputHashMapping);
+				if (tmpSolutionContext.InputHashMapping)
+				{
+					tmpInputManyfest.hashTranslations.addTranslation(tmpSolutionContext.InputHashMapping);
+				}
 
 				let tmpOutputSchema = (
 					{
@@ -272,7 +275,10 @@ class Elucidator
 					});
 					tmpDescriptionManyfest.schemaManipulations.resolveAddressMappings(tmpOutputSchema.Descriptors, tmpStep.OutputHashAddressMap);
 				let tmpOutputManyfest = new libManyfest(tmpOutputSchema);
-				tmpOutputManyfest.hashTranslations.addTranslation(tmpSolutionContext.OutputHashMapping);
+				if (tmpSolutionContext.OutputHashMapping)
+				{
+					tmpOutputManyfest.hashTranslations.addTranslation(tmpSolutionContext.OutputHashMapping);
+				}
 	
 				// Construct the instruction state object
 				let tmpInstructionState = (
@@ -284,12 +290,26 @@ class Elucidator
 
 					Operation: tmpOperation,
 
+					SolutionContext: tmpSolutionContext,
+
 					InputObject: tmpInputObject,
 					InputManyfest: tmpInputManyfest,
 
 					OutputObject: tmpOutputObject,
 					OutputManyfest: tmpOutputManyfest
 				});
+
+				tmpInstructionState.logError = 
+					(pMessage) => 
+					{
+						tmpSolutionContext.SolutionLog.push(`[ERROR][Operation ${tmpInstructionState.Operation.Description.Namespace}:${tmpInstructionState.Operation.Description.Hash} - Step #${i}:${tmpStep.Namespace}:${tmpStep.Instruction}] ${pMessage}`)
+					};
+
+				tmpInstructionState.logInfo = 
+					(pMessage) => 
+					{
+						tmpSolutionContext.SolutionLog.push(`[INFO][Operation ${tmpInstructionState.Operation.Description.Namespace}:${tmpInstructionState.Operation.Description.Hash} - Step #${i}:${tmpStep.Namespace}:${tmpStep.Instruction}] ${pMessage}`)
+					};
 
 				if (this.instructionSets[tmpInstructionState.Namespace].hasOwnProperty(tmpInstructionState.Instruction))
 				{

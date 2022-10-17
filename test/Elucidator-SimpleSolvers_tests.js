@@ -80,6 +80,51 @@ suite
 						fTestComplete();
 					}
 				);
+				test
+				(
+					'Aggregate a set of numbers.',
+					(fTestComplete)=>
+					{
+						let _Elucidator = new libElucidator();
+						let tmpData = {a: [100, 200, 50, 3, 5]};
+						let tmpSolverResults = _Elucidator.solveInternalOperation('Math', 'Aggregate', tmpData);
+						// This should make us the best prime number.  Fight me.
+						Expect(tmpData.x).to.equal(358);
+						Expect(tmpSolverResults.SolutionLog[0]).to.equal('Aggregate all numeric values in a, storing the resultant in x.');
+						Expect(tmpSolverResults.SolutionLog[3]).to.equal('[INFO][Operation Math:Aggregate - Step #0:Math:aggregate] Adding element [2] value 50 totaling: 350');
+						fTestComplete();
+					}
+				);
+				test
+				(
+					'Aggregate a set of numbers from an address in a complex object',
+					(fTestComplete)=>
+					{
+						let _Elucidator = new libElucidator();
+						let tmpData = {a: {'Fruit':400, 'Cuvee':200, 'bread':10}};
+						let tmpSolverResults = _Elucidator.solveInternalOperation('Math', 'Aggregate', tmpData);
+						// This should make us the best prime number.  Fight me.
+						Expect(tmpData.x).to.equal(610);
+						Expect(tmpSolverResults.SolutionLog[0]).to.equal('Aggregate all numeric values in a, storing the resultant in x.');
+						Expect(tmpSolverResults.SolutionLog[2]).to.equal('[INFO][Operation Math:Aggregate - Step #0:Math:aggregate] Adding object property [Cuvee] value 200 totaling: 600');
+						fTestComplete();
+					}
+				);
+				test
+				(
+					'Aggregate a set of numbers from an address in a complex object where one value is not a number',
+					(fTestComplete)=>
+					{
+						let _Elucidator = new libElucidator();
+						let tmpData = {a: {'Fruit':400, 'Cuvee':'THIS IS NOT A NUMBER', 'bread':10}};
+						let tmpSolverResults = _Elucidator.solveInternalOperation('Math', 'Aggregate', tmpData);
+						// This should make us the best prime number.  Fight me.
+						Expect(tmpData.x).to.equal(410);
+						Expect(tmpSolverResults.SolutionLog[0]).to.equal('Aggregate all numeric values in a, storing the resultant in x.');
+						Expect(tmpSolverResults.SolutionLog[2]).to.equal('[ERROR][Operation Math:Aggregate - Step #0:Math:aggregate] Object property Cuvee] could not be parsed as a number; skipping.  (THIS IS NOT A NUMBER)');
+						fTestComplete();
+					}
+				);
 			}
 		);
 	}

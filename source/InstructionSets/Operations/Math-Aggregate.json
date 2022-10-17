@@ -1,0 +1,32 @@
+{
+	"Description":
+	{
+		"Namespace": "Math",
+		"Operation": "Aggregate",
+		"Synopsis": "Aggregate a set of numbers (from array or object address):  x = a + b + ... + z"
+	},
+
+	"Inputs": 
+	{
+		"a": { "Hash": "a", "Type": "Number" }
+	},
+
+	"Outputs":
+	{
+		"x": { "Hash": "x", "Type": "Number" }
+	},
+	
+	"Log":
+	{
+		"PreOperation": "Aggregate all numeric values in {{Name:a}}, storing the resultant in {{Name:x}}.",
+		"PostOperation": "Operation complete: {{Name:x}} = {{OutputValue:x}}"		
+	},
+
+	"Steps":
+	[
+		{
+			"Namespace": "Math",
+			"Instruction": "aggregate"
+		}
+	]
+}

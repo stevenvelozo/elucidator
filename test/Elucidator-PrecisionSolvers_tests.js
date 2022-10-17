@@ -79,6 +79,36 @@ suite
 						fTestComplete();
 					}
 				);
+				test
+				(
+					'Aggregate a set of numbers.',
+					(fTestComplete)=>
+					{
+						let _Elucidator = new libElucidator();
+						let tmpData = {a: [100, 200, 50, 3, 5]};
+						let tmpSolverResults = _Elucidator.solveInternalOperation('PreciseMath', 'Aggregate', tmpData);
+						// This should make us the best prime number.  Fight me.
+						Expect(tmpData.x).to.equal('358');
+						Expect(tmpSolverResults.SolutionLog[0]).to.equal('Aggregate all numeric values in a, storing the resultant in x.');
+						Expect(tmpSolverResults.SolutionLog[3]).to.equal('[INFO][Operation PreciseMath:Aggregate - Step #0:PreciseMath:aggregate] Adding element [2] value 50 totaling: 350');
+						fTestComplete();
+					}
+				);
+				test
+				(
+					'Aggregate a precise set of numbers.',
+					(fTestComplete)=>
+					{
+						let _Elucidator = new libElucidator();
+						let tmpData = {a: [100, '200.10293112', 50, '3.01', 5]};
+						let tmpSolverResults = _Elucidator.solveInternalOperation('PreciseMath', 'Aggregate', tmpData);
+						// This should make us the best prime number.  Fight me.
+						Expect(tmpData.x).to.equal('358.11293112');
+						Expect(tmpSolverResults.SolutionLog[0]).to.equal('Aggregate all numeric values in a, storing the resultant in x.');
+						Expect(tmpSolverResults.SolutionLog[3]).to.equal('[INFO][Operation PreciseMath:Aggregate - Step #0:PreciseMath:aggregate] Adding element [2] value 50 totaling: 350.10293112');
+						fTestComplete();
+					}
+				);
 			}
 		);
 	}
