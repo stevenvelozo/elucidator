@@ -51,17 +51,22 @@ class Elucidator
 		// These provide the "Math" namespace
 		this.loadInstructionSet(require(`./InstructionSets/Math-Javascript.js`));
 
-		// A precision javascript library that is consistent across browsers, stable and without mantissa issues
+		// A precision javascript math library that is consistent across browsers, stable and without mantissa issues
+		// Uses Decimal.js
 		// These provide the "PreciseMath" namespace
 		this.loadInstructionSet(require(`./InstructionSets/PreciseMath-Decimal.js`));
 
-		// The abstract geometry instructions and operations
+		// The abstract geometry instructions and operations (rectangle area, circle area, etc.)
 		// These provide the "Geometry" namespace
 		this.loadInstructionSet(require(`./InstructionSets/Geometry.js`));
 
-		// The logic namespace (if, execution of instructions, etc.)
+		// The logic operations (if, execution of instructions, etc.)
 		// These provide the "Logic" namespace
 		this.loadInstructionSet(require(`./InstructionSets/Logic.js`));
+
+		// Basic string manipulation instructions and operations
+		// These provide the "String" namespace
+		this.loadInstructionSet(require(`./InstructionSets/String.js`));
 	}
 
 	operationExists(pNamespace, pOperationHash)

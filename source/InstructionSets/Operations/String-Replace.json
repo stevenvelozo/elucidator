@@ -1,0 +1,34 @@
+{
+	"Description":
+	{
+		"Namespace": "String",
+		"Operation": "Replace",
+		"Synopsis": "Replace all instances of searchFor with replaceWith in inputString"
+	},
+
+	"Inputs": 
+	{
+		"inputString": { "Hash": "inputString", "Type": "String" },
+		"searchFor": { "Hash": "searchFor", "Type": "String" },
+		"replaceWith": { "Hash": "replaceWith", "Type": "String" }
+	},
+
+	"Outputs":
+	{
+		"outputString": { "Hash": "outputString", "Type": "String" }
+	},
+	
+	"Log":
+	{
+		"PreOperation": "Search for [{{InputValue:searchFor}}] and replace it with [{{InputValue:replaceWith}}] in [{{InputValue:inputString}}].",
+		"PostOperation": "Operation complete: {{Name:outputString}} = [{{OutputValue:outputString}}] from [{{InputValue:inputString}}] replacing [{{InputValue:searchFor}}] with [{{InputValue:replaceWith}}]."
+	},
+
+	"Steps":
+	[
+		{
+			"Namespace": "String",
+			"Instruction": "replace"
+		}
+	]
+}

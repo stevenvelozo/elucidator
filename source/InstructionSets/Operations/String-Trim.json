@@ -1,0 +1,32 @@
+{
+	"Description":
+	{
+		"Namespace": "String",
+		"Operation": "Trim",
+		"Synopsis": "Trim whitespace off the end of string in inputString, putting the result in outputString"
+	},
+
+	"Inputs": 
+	{
+		"inputString": { "Hash": "inputString", "Type": "String" }
+	},
+
+	"Outputs":
+	{
+		"outputString": { "Hash": "outputString", "Type": "String" }
+	},
+	
+	"Log":
+	{
+		"PreOperation": "Trim the whitespace from value [{{InputValue:inputString}}].",
+		"PostOperation": "Operation complete: {{Name:outputString}} = [{{OutputValue:outputString}}] from [{{InputValue:inputString}}]"
+	},
+
+	"Steps":
+	[
+		{
+			"Namespace": "String",
+			"Instruction": "trim"
+		}
+	]
+}

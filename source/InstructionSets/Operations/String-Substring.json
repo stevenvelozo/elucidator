@@ -1,0 +1,34 @@
+{
+	"Description":
+	{
+		"Namespace": "String",
+		"Operation": "Substring",
+		"Synopsis": "Get all characters between indexStart and indexEnd (optional) for a given inputString."
+	},
+
+	"Inputs": 
+	{
+		"inputString": { "Hash": "inputString", "Type": "String" },
+		"indexStart": { "Hash": "indexStart", "Type": "Number", "Default":0 },
+		"indexEnd": { "Hash": "indexEnd", "Type": "String", "Default":null }
+	},
+
+	"Outputs":
+	{
+		"outputString": { "Hash": "outputString", "Type": "String" }
+	},
+	
+	"Log":
+	{
+		"PreOperation": "Get all characters between {{InputValue:indexStart}} and {{InputValue:indexEnd}} in [{{InputValue:inputString}}].",
+		"PostOperation": "Operation complete: {{Name:outputString}} = [{{OutputValue:outputString}}] from [{{InputValue:inputString}}] between {{InputValue:indexStart}} and {{InputValue:indexEnd}}."
+	},
+
+	"Steps":
+	[
+		{
+			"Namespace": "String",
+			"Instruction": "substring"
+		}
+	]
+}
