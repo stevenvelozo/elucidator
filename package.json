@@ -1,6 +1,6 @@
 {
   "name": "elucidator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Elucidator solver service and API.",
   "main": "source/elucidator.js",
   "scripts": {
