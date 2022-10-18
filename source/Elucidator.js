@@ -33,6 +33,15 @@ class Elucidator
 		this.UUID = 0;
 
 		this.loadDefaultInstructionSets();
+
+		if (pOperations)
+		{
+			let tmpSolverHashes = Object.keys(pOperations);
+			for (let i = 0; i < tmpSolverHashes.length; i++)
+			{
+				this.addOperation('Custom',tmpSolverHashes[i], pOperations[tmpSolverHashes[i]]);
+			}
+		}
     }
 
 	// Load an instruction set

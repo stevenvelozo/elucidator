@@ -198,6 +198,45 @@ suite
 				);
 				test
 				(
+					'Pass in solvers at constructor-time.',
+					(fTestComplete)=>
+					{
+						let _Elucidator = new libElucidator(
+							{
+								"TallyBill": 
+								{
+									"Description":
+									{
+										"Namespace": "Custom",
+										"Operation": "TallyBill",
+										"Synopsis": "Add up the bill: BillTotal =  CarrotCost + AppleCost"
+									},
+									"Steps":
+									[
+										{
+											"Namespace": "Math",
+											"Instruction": "add",
+											"InputHashAddressMap": 
+												{
+													"a": "CarrotCost",
+													"b": "AppleCost"
+												},
+											"OutputHashAddressMap":
+												{
+													"x": "BillTotal"
+												}
+										}
+									]
+								}
+							});
+						let tmpData = {CarrotCost:1000, AppleCost:10};
+						let tmpOperationContext = _Elucidator.solveInternalOperation('Custom','TallyBill', tmpData);
+						Expect(tmpData.BillTotal).to.equal(1010);
+						fTestComplete();
+					}
+				);
+				test
+				(
 					'Multiple instructions.',
 					(fTestComplete)=>
 					{
