@@ -61,7 +61,7 @@
   },
   "dependencies": {
     "decimal.js": "^10.4.2",
-    "manyfest": "^1.0.8",
+    "manyfest": "^1.0.10",
     "precedent": "^1.0.6"
   }
 }
