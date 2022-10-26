@@ -46,47 +46,214 @@ let round = (pOperation) =>
     let tmpRoundingMode = pOperation.InputManyfest.getValueByHash(pOperation.InputObject, 'roundingmode')
 
     // Eventually don't set this every time...
-    switch (tmpRoundingMode.toString().toLowerCase())
+    if (tmpRoundingMode)
     {
-        case 'round_up':
-            libDecimal.set({ rounding: libDecimal.ROUND_UP });
-            break;
-        case 'round_down':
-            libDecimal.set({ rounding: libDecimal.ROUND_DOWN });
-            break;
-        case 'round_ceil':
-            libDecimal.set({ rounding: libDecimal.ROUND_CEIL });
-            break;
-        case 'round_floor':
-            libDecimal.set({ rounding: libDecimal.ROUND_FLOOR });
-            break;
-        default:
-        case 'round_half_up':
-            libDecimal.set({ rounding: libDecimal.ROUND_HALF_UP });
-            break;
-        case 'round_half_down':
-            libDecimal.set({ rounding: libDecimal.ROUND_HALF_DOWN });
-            break;
-        case 'round_half_even':
-            libDecimal.set({ rounding: libDecimal.ROUND_HALF_EVEN });
-            break;
-        case 'round_half_ceil':
-            libDecimal.set({ rounding: libDecimal.ROUND_HALF_CEIL });
-            break;
-        case 'round_half_floor':
-            libDecimal.set({ rounding: libDecimal.ROUND_HALF_FLOOR });
-            break;
-        case 'euclid':
-            libDecimal.set({ rounding: libDecimal.EUCLID });
-            break;
+        switch (tmpRoundingMode.toString().toLowerCase())
+        {
+            case 'round_up':
+                libDecimal.set({ rounding: libDecimal.ROUND_UP });
+                break;
+            case 'round_down':
+                libDecimal.set({ rounding: libDecimal.ROUND_DOWN });
+                break;
+            case 'round_ceil':
+                libDecimal.set({ rounding: libDecimal.ROUND_CEIL });
+                break;
+            case 'round_floor':
+                libDecimal.set({ rounding: libDecimal.ROUND_FLOOR });
+                break;
+            default:
+            case 'round_half_up':
+                libDecimal.set({ rounding: libDecimal.ROUND_HALF_UP });
+                break;
+            case 'round_half_down':
+                libDecimal.set({ rounding: libDecimal.ROUND_HALF_DOWN });
+                break;
+            case 'round_half_even':
+                libDecimal.set({ rounding: libDecimal.ROUND_HALF_EVEN });
+                break;
+            case 'round_half_ceil':
+                libDecimal.set({ rounding: libDecimal.ROUND_HALF_CEIL });
+                break;
+            case 'round_half_floor':
+                libDecimal.set({ rounding: libDecimal.ROUND_HALF_FLOOR });
+                break;
+            case 'euclid':
+                libDecimal.set({ rounding: libDecimal.EUCLID });
+                break;
+        }
     }
-
+    
     if (!isNaN(tmpPrecision))
     {
         libDecimal.set({ precision: tmpPrecision });
     }
 
     pOperation.OutputManyfest.setValueByHash(pOperation.OutputObject, 'x', libDecimal.round(tmpA).toString());
+};
+
+
+let tosignificantdigits = (pOperation) =>
+{
+    let tmpA = new libDecimal(pOperation.InputManyfest.getValueByHash(pOperation.InputObject, 'a'));
+
+    let tmpDigits = parseInt(pOperation.InputManyfest.getValueByHash(pOperation.InputObject, 'digits'));
+    let tmpRoundingMode = pOperation.InputManyfest.getValueByHash(pOperation.InputObject, 'roundingmode')
+
+    // Eventually don't set this every time...
+    if (tmpRoundingMode)
+    {
+        switch (tmpRoundingMode.toString().toLowerCase())
+        {
+            case 'round_up':
+                libDecimal.set({ rounding: libDecimal.ROUND_UP });
+                break;
+            case 'round_down':
+                libDecimal.set({ rounding: libDecimal.ROUND_DOWN });
+                break;
+            case 'round_ceil':
+                libDecimal.set({ rounding: libDecimal.ROUND_CEIL });
+                break;
+            case 'round_floor':
+                libDecimal.set({ rounding: libDecimal.ROUND_FLOOR });
+                break;
+            default:
+            case 'round_half_up':
+                libDecimal.set({ rounding: libDecimal.ROUND_HALF_UP });
+                break;
+            case 'round_half_down':
+                libDecimal.set({ rounding: libDecimal.ROUND_HALF_DOWN });
+                break;
+            case 'round_half_even':
+                libDecimal.set({ rounding: libDecimal.ROUND_HALF_EVEN });
+                break;
+            case 'round_half_ceil':
+                libDecimal.set({ rounding: libDecimal.ROUND_HALF_CEIL });
+                break;
+            case 'round_half_floor':
+                libDecimal.set({ rounding: libDecimal.ROUND_HALF_FLOOR });
+                break;
+            case 'euclid':
+                libDecimal.set({ rounding: libDecimal.EUCLID });
+                break;
+        }
+    }
+    
+    if (isNaN(tmpDigits))
+    {
+        tmpDigits = 12;
+    }
+
+    pOperation.OutputManyfest.setValueByHash(pOperation.OutputObject, 'x', tmpA.toSignificantDigits(tmpDigits).toString());
+};
+
+let todecimalplaces = (pOperation) =>
+{
+    let tmpA = new libDecimal(pOperation.InputManyfest.getValueByHash(pOperation.InputObject, 'a'));
+
+    let tmpDecimalPlaces = parseInt(pOperation.InputManyfest.getValueByHash(pOperation.InputObject, 'decimalplaces'));
+    let tmpRoundingMode = pOperation.InputManyfest.getValueByHash(pOperation.InputObject, 'roundingmode')
+
+    // Eventually don't set this every time...
+    if (tmpRoundingMode)
+    {
+        switch (tmpRoundingMode.toString().toLowerCase())
+        {
+            case 'round_up':
+                libDecimal.set({ rounding: libDecimal.ROUND_UP });
+                break;
+            case 'round_down':
+                libDecimal.set({ rounding: libDecimal.ROUND_DOWN });
+                break;
+            case 'round_ceil':
+                libDecimal.set({ rounding: libDecimal.ROUND_CEIL });
+                break;
+            case 'round_floor':
+                libDecimal.set({ rounding: libDecimal.ROUND_FLOOR });
+                break;
+            default:
+            case 'round_half_up':
+                libDecimal.set({ rounding: libDecimal.ROUND_HALF_UP });
+                break;
+            case 'round_half_down':
+                libDecimal.set({ rounding: libDecimal.ROUND_HALF_DOWN });
+                break;
+            case 'round_half_even':
+                libDecimal.set({ rounding: libDecimal.ROUND_HALF_EVEN });
+                break;
+            case 'round_half_ceil':
+                libDecimal.set({ rounding: libDecimal.ROUND_HALF_CEIL });
+                break;
+            case 'round_half_floor':
+                libDecimal.set({ rounding: libDecimal.ROUND_HALF_FLOOR });
+                break;
+            case 'euclid':
+                libDecimal.set({ rounding: libDecimal.EUCLID });
+                break;
+        }
+    }
+    
+    if (isNaN(tmpDecimalPlaces))
+    {
+        tmpDecimalPlaces = 2;
+    }
+
+    pOperation.OutputManyfest.setValueByHash(pOperation.OutputObject, 'x', tmpA.toDecimalPlaces(tmpDecimalPlaces).toString());
+};
+
+let setprecision = (pOperation) =>
+{
+    let tmpPrecision = parseInt(pOperation.InputManyfest.getValueByHash(pOperation.InputObject, 'precision'));
+    
+    console.log(tmpPrecision)
+    if (!isNaN(tmpPrecision))
+    {
+        libDecimal.set({ precision: tmpPrecision });
+    }
+};
+
+let setroundingmode = (pOperation) =>
+{
+    let tmpRoundingMode = pOperation.InputManyfest.getValueByHash(pOperation.InputObject, 'roundingmode')
+
+    // Eventually don't set this every time...
+    if (tmpRoundingMode)
+    {
+        switch (tmpRoundingMode.toString().toLowerCase())
+        {
+            case 'round_up':
+                libDecimal.set({ rounding: libDecimal.ROUND_UP });
+                break;
+            case 'round_down':
+                libDecimal.set({ rounding: libDecimal.ROUND_DOWN });
+                break;
+            case 'round_ceil':
+                libDecimal.set({ rounding: libDecimal.ROUND_CEIL });
+                break;
+            case 'round_floor':
+                libDecimal.set({ rounding: libDecimal.ROUND_FLOOR });
+                break;
+            default:
+            case 'round_half_up':
+                libDecimal.set({ rounding: libDecimal.ROUND_HALF_UP });
+                break;
+            case 'round_half_down':
+                libDecimal.set({ rounding: libDecimal.ROUND_HALF_DOWN });
+                break;
+            case 'round_half_even':
+                libDecimal.set({ rounding: libDecimal.ROUND_HALF_EVEN });
+                break;
+            case 'round_half_ceil':
+                libDecimal.set({ rounding: libDecimal.ROUND_HALF_CEIL });
+                break;
+            case 'round_half_floor':
+                libDecimal.set({ rounding: libDecimal.ROUND_HALF_FLOOR });
+                break;
+            case 'euclid':
+                libDecimal.set({ rounding: libDecimal.EUCLID });
+                break;
+        }
+    }
 };
 
 let aggregate = (pOperation) =>
@@ -185,9 +352,14 @@ class PreciseMath extends libElucidatorInstructionSet
 
         this.addInstruction('aggregate', aggregate);
 
-        this.addInstruction('round', round);
+        this.addInstruction('setprecision', setprecision);
+        this.addInstruction('setroundingmode', setroundingmode);
 
+        this.addInstruction('todecimalplaces', todecimalplaces);
+        this.addInstruction('tosignificantdigits', tosignificantdigits);
+        this.addInstruction('round', round);
         this.addInstruction('tofraction', toFraction);
+
 
         return true;
     }
@@ -198,8 +370,15 @@ class PreciseMath extends libElucidatorInstructionSet
         this.addOperation('subtract', require(`./Operations/PreciseMath-Subtract.json`));
         this.addOperation('multiply', require(`./Operations/PreciseMath-Multiply.json`));
         this.addOperation('divide', require(`./Operations/PreciseMath-Divide.json`));
-        this.addOperation('round', require('./Operations/PreciseMath-Round.json'));
+
         this.addOperation('aggregate', require('./Operations/PreciseMath-Aggregate.json'));
+
+        this.addOperation('setprecision', require('./Operations/PreciseMath-SetPrecision.json'));
+        this.addOperation('setroundingmode', require('./Operations/PreciseMath-SetRoundingMode.json'));
+
+        this.addOperation('tosignificantdigits', require('./Operations/PreciseMath-ToSignificantDigits.json'));
+        this.addOperation('todecimalplaces', require('./Operations/PreciseMath-ToDecimalPlaces.json'));
+        this.addOperation('round', require('./Operations/PreciseMath-Round.json'));
 
         return true;
     }

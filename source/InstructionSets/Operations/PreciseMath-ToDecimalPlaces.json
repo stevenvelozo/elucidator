@@ -1,0 +1,35 @@
+{
+	"Description":
+	{
+		"Namespace": "PreciseMath",
+		"Operation": "ToDecimalPlaces",
+		"Synopsis": "Precisely round a number to a certain number of decimal places."
+	},
+
+	"Inputs":
+	{
+		"a": { "Hash": "a", "Type": "Number" },
+		"decimalplaces": { "Hash": "decimalplaces", "Type": "Number", "Default":2 },
+		"roundingmode": { "Hash": "roundingmode", "Type":"String" }
+
+	},
+
+	"Outputs":
+	{
+		"x": { "Hash": "x", "Type": "Number" }
+	},
+
+	"Log":
+	{
+		"PreOperation": "Round {{Name:a}} to {{Value:decimalplaces}} decimal places, storing the value in {{Name:x}}.",
+		"PostOperation": "Operation complete: {{Name:x}} = Round({{InputValue:a}} TO {{Value:decimalplaces}} decimal places) = {{OutputValue:x}}"
+	},
+
+	"Steps":
+	[
+		{
+			"Namespace": "PreciseMath",
+			"Instruction": "todecimalplaces"
+		}
+	]
+}

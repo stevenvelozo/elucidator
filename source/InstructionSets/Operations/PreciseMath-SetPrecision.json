@@ -1,0 +1,32 @@
+{
+	"Description":
+	{
+		"Namespace": "PreciseMath",
+		"Operation": "SetPrecision",
+		"Synopsis": "Set the precision."
+	},
+
+	"Inputs":
+	{
+		"precision": { "Hash": "precision", "Type":"Number", "Default":2}
+
+	},
+
+	"Outputs":
+	{
+	},
+
+	"Log":
+	{
+		"PreOperation": "Set precision to {{InputValue:precision}}.",
+		"PostOperation": "Operation complete: Default precision set to {{InputValue:precision}}."
+	},
+
+	"Steps":
+	[
+		{
+			"Namespace": "PreciseMath",
+			"Instruction": "setprecision"
+		}
+	]
+}

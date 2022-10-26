@@ -1,0 +1,32 @@
+{
+	"Description":
+	{
+		"Namespace": "PreciseMath",
+		"Operation": "SetRoundingMode",
+		"Synopsis": "Set the rounding mode."
+	},
+
+	"Inputs":
+	{
+		"roundingmode": { "Hash": "roundingmode", "Type":"String", "Default":"ROUND_HALF_UP"}
+
+	},
+
+	"Outputs":
+	{
+	},
+
+	"Log":
+	{
+		"PreOperation": "Set rounding mode to {{InputValue:roundingmode}}.",
+		"PostOperation": "Operation complete: Default rounding mode set to {{InputValue:roundingmode}}."
+	},
+
+	"Steps":
+	[
+		{
+			"Namespace": "PreciseMath",
+			"Instruction": "setroundingmode"
+		}
+	]
+}

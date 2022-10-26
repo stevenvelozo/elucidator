@@ -1,0 +1,35 @@
+{
+	"Description":
+	{
+		"Namespace": "PreciseMath",
+		"Operation": "ToSignificantDigits",
+		"Synopsis": "Precisely round a number to a specific number of significant digits."
+	},
+
+	"Inputs":
+	{
+		"a": { "Hash": "a", "Type": "Number" },
+		"digits": { "Hash": "digits", "Type": "Number", "Default":12 },
+		"roundingmode": { "Hash": "roundingmode", "Type":"String" }
+
+	},
+
+	"Outputs":
+	{
+		"x": { "Hash": "x", "Type": "Number" }
+	},
+
+	"Log":
+	{
+		"PreOperation": "Round {{Name:a}} to {{InputValue:digits}}, storing the value in {{Name:x}}.",
+		"PostOperation": "Operation complete: {{Name:x}} = Round({{InputValue:a}} TO {{InputValue:digits}}) = {{OutputValue:x}}"
+	},
+
+	"Steps":
+	[
+		{
+			"Namespace": "PreciseMath",
+			"Instruction": "tosignificantdigits"
+		}
+	]
+}

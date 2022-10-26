@@ -88,6 +88,32 @@ suite
 						let tmpData = {a:10.22445566};
 						_Elucidator.solveInternalOperation('PreciseMath', 'Round', tmpData);
 						Expect(tmpData.x)
+							.to.equal('10');
+						fTestComplete();
+					}
+				);
+				test
+				(
+					'Round a number.',
+					(fTestComplete)=>
+					{
+						let _Elucidator = new libElucidator();
+						let tmpData = {a:10.22445566, digits:2};
+						_Elucidator.solveInternalOperation('PreciseMath', 'ToSignificantDigits', tmpData);
+						Expect(tmpData.x)
+							.to.equal('10');
+						fTestComplete();
+					}
+				);
+				test
+				(
+					'Round a number to specific digits.',
+					(fTestComplete)=>
+					{
+						let _Elucidator = new libElucidator();
+						let tmpData = {a:10.22445566, decimalplaces:2};
+						_Elucidator.solveInternalOperation('PreciseMath', 'ToDecimalPlaces', tmpData);
+						Expect(tmpData.x)
 							.to.equal('10.22');
 						fTestComplete();
 					}
@@ -98,7 +124,8 @@ suite
 					(fTestComplete)=>
 					{
 						let _Elucidator = new libElucidator();
-						let tmpData = {a: [100, 200, 50, 3, 5]};
+						let tmpData = {a: [100, 200, 50, 3, 5], precision:12};
+						_Elucidator.solveInternalOperation('PreciseMath', 'SetPrecision', tmpData);
 						let tmpSolverResults = _Elucidator.solveInternalOperation('PreciseMath', 'Aggregate', tmpData);
 						// This should make us the best prime number.  Fight me.
 						Expect(tmpData.x).to.equal('358');
