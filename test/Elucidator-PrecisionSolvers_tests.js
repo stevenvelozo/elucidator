@@ -81,6 +81,19 @@ suite
 				);
 				test
 				(
+					'Round a number.',
+					(fTestComplete)=>
+					{
+						let _Elucidator = new libElucidator();
+						let tmpData = {a:10.22445566};
+						_Elucidator.solveInternalOperation('PreciseMath', 'Round', tmpData);
+						Expect(tmpData.x)
+							.to.equal('10.22');
+						fTestComplete();
+					}
+				);
+				test
+				(
 					'Aggregate a set of numbers.',
 					(fTestComplete)=>
 					{

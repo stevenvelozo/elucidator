@@ -9,7 +9,7 @@
     "test": "./node_modules/mocha/bin/_mocha -u tdd -R spec",
     "build": "./node_modules/.bin/gulp build",
     "docker-dev-build-image": "docker build ./ -t retold/elucidator:local",
-    "docker-dev-run": "docker run -it -d --name elucidator-dev -p 12333:8080 -p 5500:5500 -v \"$PWD/.config:/home/coder/.config\"  -v \"$PWD:/home/coder/elucidator\" -u \"$(id -u):$(id -g)\" -e \"DOCKER_USER=$USER\" retold/elucidator:local"
+    "docker-dev-run": "docker run -it -d --name elucidator-dev -p 12333:8080 -p 5678:5500 -v \"$PWD/.config:/home/coder/.config\"  -v \"$PWD:/home/coder/elucidator\" -u \"$(id -u):$(id -g)\" -e \"DOCKER_USER=$USER\" retold/elucidator:local"
   },
   "mocha": {
     "diff": true,

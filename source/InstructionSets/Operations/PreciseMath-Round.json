@@ -1,0 +1,35 @@
+{
+	"Description":
+	{
+		"Namespace": "PreciseMath",
+		"Operation": "Round",
+		"Synopsis": "Precisely round a number."
+	},
+
+	"Inputs":
+	{
+		"a": { "Hash": "a", "Type": "Number" },
+		"precision": { "Hash": "precision", "Type": "Number" },
+		"roundingmode": { "Hash": "roundingmode", "Type":"String", "Default":"ROUND_HALF_UP"}
+
+	},
+
+	"Outputs":
+	{
+		"x": { "Hash": "x", "Type": "Number" }
+	},
+
+	"Log":
+	{
+		"PreOperation": "Round {{Name:a}} to {{InputValue:precision}} digits using {{InputValue:roundingmode}}, storing the value in {{Name:x}}.",
+		"PostOperation": "Operation complete: {{Name:x}} = Round({{InputValue:a}} TO {{InputValue:roundingmode}} USING {{InputValue:roundingmode}} = {{OutputValue:x}}"
+	},
+
+	"Steps":
+	[
+		{
+			"Namespace": "PreciseMath",
+			"Instruction": "round"
+		}
+	]
+}
