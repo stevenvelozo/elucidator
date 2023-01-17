@@ -1,0 +1,34 @@
+{
+	"Description":
+	{
+		"Namespace": "Set",
+		"Operation": "GroupValuesBy",
+		"Synopsis": "Group set of Sub object values by another property in the objects."
+	},
+
+	"Inputs": 
+	{
+		"inputDataSet": { "Hash":"inputDataSet", "Type":"Set" },
+		"groupByProperty": { "Hash":"groupByProperty", "Type":"Any"},
+		"groupValueProperty": { "Hash":"groupValueProperty", "Type":"Any"}
+	},
+
+	"Outputs":
+	{
+		"outputDataSet": { "Hash": "outputDataSet", "Type": "Set" }
+	},
+	
+	"Log":
+	{
+		"PreOperation": "Group {{Name:inputDataSet}} by {{Name:groupByProperty}} and create a mapped result set into {{Name:outputDataSet}}.",
+		"PostOperation": "Operation complete: Grouping {{Name:inputDataSet}} by {{Name:groupByProperty}} into {{Name:outputDataSet}}"
+	},
+
+	"Steps":
+	[
+		{
+			"Namespace": "Set",
+			"Instruction": "GroupValuesBy"
+		}
+	]
+}

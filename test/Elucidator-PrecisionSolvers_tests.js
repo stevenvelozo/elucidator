@@ -151,5 +151,43 @@ suite
 				);
 			}
 		);
+
+		suite
+		(
+			'Simple Group By Aggregation Operations',
+			()=>
+			{
+				test
+				(
+					'Execute a basic group by aggregation.',
+					(fTestComplete)=>
+					{
+						let _Elucidator = new libElucidator();
+						let tmpData = {
+							namespace:'PreciseMath',
+							operation:'GroupValuesAndAggregate',
+							inputDataSet: [
+									{SetName:'Food', Value:100},
+									{SetName:'Drink', Value:100},
+									{SetName:'Food', Value:11},
+									{SetName:'Drink', Value:200.132},
+									{SetName:'Food', Value:12},
+									{SetName:'Drink', Value:300},
+									{SetName:'Food', Value:13.12},
+									{SetName:'Food', Value:14.91812},
+									{SetName:'Food', Value:15},
+									{SetName:'Food', Value:16},
+									{SetName:'Food', Value:17}
+								],
+							groupByProperty:'SetName',
+							groupValueProperty:'Value' };
+						let tmpOperationOutput = _Elucidator.solveInternalOperation('PreciseMath', 'GroupValuesAndAggregate', tmpData);
+						Expect(tmpData.outputDataSet.Food).to.equal('199.03812');
+						Expect(tmpData.outputDataSet.Drink).to.equal('600.132');
+						fTestComplete();
+					}
+				);
+			}
+		);
 	}
 );

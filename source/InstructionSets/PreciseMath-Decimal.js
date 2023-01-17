@@ -320,6 +320,130 @@ let aggregate = (pOperation) =>
     return true;
 };
 
+const groupValuesAndAggregate = (pOperation) =>
+{
+    let tmpInputDataSet = pOperation.InputManyfest.getValueByHash(pOperation.InputObject, 'inputDataSet');
+    let tmpGroupByProperty = pOperation.InputManyfest.getValueByHash(pOperation.InputObject, 'groupByProperty');
+    let tmpGroupValueProperty = pOperation.InputManyfest.getValueByHash(pOperation.InputObject, 'groupValueProperty');
+
+    let tmpOutputDataSet = {};
+    let tmpProcessedOutputDataSet = {};
+ 
+    let tmpObjectType = typeof(tmpInputDataSet);
+
+    if (tmpObjectType == 'object')
+    {
+        if (Array.isArray(tmpInputDataSet))
+        {
+            for (let i = 0; i < tmpInputDataSet.length; i++)
+            {
+                if (typeof(tmpInputDataSet[i]) !== 'object')
+                {
+                    pOperation.logInfo(`Element [${i}] was not an object; skipping group operation.`);
+                }
+                else
+                {
+                    let tmpValue = tmpInputDataSet[i];
+                    let tmpGroupByValue = tmpValue[tmpGroupByProperty];
+                    if (!tmpValue.hasOwnProperty(tmpGroupByProperty))
+                    {
+                        pOperation.logInfo(`Element [${i}] doesn't have the group by property [${tmpGroupByProperty}]; setting group to [__NO_GROUP].`);
+                        tmpGroupByValue = '__NO_GROUP';
+                    }
+
+                    if (!tmpValue.hasOwnProperty(tmpGroupValueProperty))
+                    {
+                        pOperation.logInfo(`Element [${i}] doesn't have the group value property [${tmpGroupValueProperty}]; skipping group operation.`);
+                    }
+                    else
+                    {
+                        let tmpDecimalValue = new libDecimal(tmpValue[tmpGroupValueProperty]);
+
+                        if (isNaN(tmpDecimalValue))
+                        {
+                            pOperation.logError(`Object property [${i}] could not be parsed as a number; skipping.  (${tmpValue[tmpGroupValueProperty]})`);
+                        }
+                        else
+                        {
+                            if (!tmpOutputDataSet.hasOwnProperty(tmpGroupByValue))
+                            {
+                                tmpOutputDataSet[tmpGroupByValue] = tmpDecimalValue;
+                            }
+                            else
+                            {
+                                tmpOutputDataSet[tmpGroupByValue] = tmpOutputDataSet[tmpGroupByValue].plus(tmpDecimalValue);
+                            }
+                            pOperation.logInfo(`Adding object property [${i}] value ${tmpDecimalValue} totaling: ${tmpOutputDataSet[tmpGroupByValue]}`)
+                        }
+                    }
+                }
+            }
+        }
+        else
+        {
+            let tmpObjectKeys = Object.keys(tmpInputDataSet);
+            for (let i = 0; i < tmpObjectKeys.length; i++)
+            {
+                if (typeof(tmpInputDataSet[tmpObjectKeys[i]]) !== 'object')
+                {
+                    pOperation.logInfo(`Element [${i}] was not an object; skipping group operation.`);
+                }
+                else
+                {
+                    let tmpValue = tmpInputDataSet[tmpObjectKeys[i]];
+                    let tmpGroupByValue = tmpValue[tmpGroupByProperty];
+                    if (!tmpValue.hasOwnProperty(tmpGroupByProperty))
+                    {
+                        pOperation.logInfo(`Element [${tmpObjectKeys[i]}][${i}] doesn't have the group by property [${tmpGroupByProperty}]; setting group to [__NO_GROUP].`);
+                        tmpGroupByValue = '__NO_GROUP';
+                    }
+
+                    if (!tmpValue.hasOwnProperty(tmpGroupValueProperty))
+                    {
+                        pOperation.logInfo(`Element [${tmpObjectKeys[i]}][${i}] doesn't have the group value property [${tmpGroupValueProperty}]; skipping group operation.`);
+                    }
+                    else
+                    {
+                        let tmpDecimalValue = new libDecimal(tmpValue[tmpGroupValueProperty]);
+
+                        if (isNaN(tmpDecimalValue))
+                        {
+                            pOperation.logError(`Object property [${tmpObjectKeys[i]}][${i}] to group ${tmpGroupByValue} could not be parsed as a number; skipping.  (${tmpValue[tmpGroupValueProperty]})`);
+                        }
+                        else
+                        {
+                            if (!tmpOutputDataSet.hasOwnProperty(tmpGroupByValue))
+                            {
+                                tmpOutputDataSet[tmpGroupByValue] = tmpDecimalValue;
+                            }
+                            else
+                            {
+                                tmpOutputDataSet[tmpGroupByValue] = tmpOutputDataSet[tmpGroupByValue].plus(tmpDecimalValue);
+                            }
+                            pOperation.logInfo(`Adding object property [${tmpObjectKeys[i]}][${i}] to group ${tmpGroupByValue} value ${tmpDecimalValue} totaling: ${tmpOutputDataSet[tmpGroupByValue]}`)
+                        }
+                    }
+                }
+            }
+        }
+
+        // Now marshal the aggregated values
+        let tmpOutputGroups = Object.keys(tmpOutputDataSet);
+        for (let j = 0; j < tmpOutputGroups.length; j++)
+        {
+            tmpProcessedOutputDataSet[tmpOutputGroups[j]] = tmpOutputDataSet[tmpOutputGroups[j]].toString();
+        }
+    }
+    else
+    {
+        pOperation.logError(`Input set is neither an Array nor an Object`);
+    }
+
+    pOperation.OutputManyfest.setValueByHash(pOperation.OutputObject, 'outputDataSet', tmpProcessedOutputDataSet);
+
+    return true;
+}
+
 let toFraction = (pOperation) =>
 {
     // This could be done in one line, but, would be more difficult to comprehend.
@@ -351,6 +475,7 @@ class PreciseMath extends libElucidatorInstructionSet
         this.addInstruction('div', divide);
 
         this.addInstruction('aggregate', aggregate);
+        this.addInstruction('groupvaluesandaggregate', groupValuesAndAggregate);
 
         this.addInstruction('setprecision', setprecision);
         this.addInstruction('setroundingmode', setroundingmode);
@@ -372,6 +497,7 @@ class PreciseMath extends libElucidatorInstructionSet
         this.addOperation('divide', require(`./Operations/PreciseMath-Divide.json`));
 
         this.addOperation('aggregate', require('./Operations/PreciseMath-Aggregate.json'));
+        this.addOperation('groupvaluesandaggregate', require('./Operations/PreciseMath-GroupValuesAndAggregate.json'));
 
         this.addOperation('setprecision', require('./Operations/PreciseMath-SetPrecision.json'));
         this.addOperation('setroundingmode', require('./Operations/PreciseMath-SetRoundingMode.json'));

@@ -8,7 +8,7 @@
 
 	"Inputs": 
 	{
-		"a": { "Hash": "a", "Type": "Number" }
+		"a": { "Hash": "a", "Type": "Set" }
 	},
 
 	"Outputs":

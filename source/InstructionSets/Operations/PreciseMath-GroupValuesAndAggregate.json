@@ -1,0 +1,35 @@
+{
+	"Description":
+	{
+		"Namespace": "PreciseMath",
+		"Operation": "GroupValuesAndAggregate",
+		"Synopsis": "Group values in a set and aggregate the set of numbers (from array or object addresses)"
+	},
+
+	"Inputs": 
+	{
+		"inputDataSet": { "Hash":"inputDataSet", "Type":"Set" },
+		"groupByProperty": { "Hash":"groupByProperty", "Type":"Any"},
+		"groupValueProperty": { "Hash":"groupValueProperty", "Type":"Any"},
+		"recordIndicatorProperty": { "Hash":"recordIndicatorProperty", "Type":"String", "Default":false}
+	},
+
+	"Outputs":
+	{
+		"outputDataSet": { "Hash": "outputDataSet", "Type": "Set" }
+	},
+	
+	"Log":
+	{
+		"PreOperation": "Group {{Name:inputDataSet}} by {{Name:groupByProperty}} and create a map, storing the resultant in {{Name:outputDataSet}}.",
+		"PostOperation": "Operation complete: Grouping {{Name:inputDataSet}} by {{Name:groupByProperty}} into aggregated values in {{Name:outputDataSet}}"
+	},
+
+	"Steps":
+	[
+		{
+			"Namespace": "PreciseMath",
+			"Instruction": "groupvaluesandaggregate"
+		}
+	]
+}

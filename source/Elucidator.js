@@ -76,6 +76,10 @@ class Elucidator
 		// Basic string manipulation instructions and operations
 		// These provide the "String" namespace
 		this.loadInstructionSet(require(`./InstructionSets/String.js`));
+
+		// Basic set manipulation instructions and operations
+		// These provide the "Set" namespace
+		this.loadInstructionSet(require(`./InstructionSets/Set.js`));
 	}
 
 	operationExists(pNamespace, pOperationHash)
