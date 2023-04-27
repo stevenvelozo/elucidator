@@ -1,10 +1,10 @@
 {
   "name": "elucidator",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Elucidator solver service and API.",
-  "main": "source/elucidator.js",
+  "main": "source/Elucidator.js",
   "scripts": {
-    "start": "node source/elucidator.js",
+    "start": "node source/Elucidator.js",
     "coverage": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -u tdd -R spec",
     "test": "./node_modules/mocha/bin/_mocha -u tdd -R spec",
     "build": "./node_modules/.bin/gulp build",
