@@ -1,0 +1,11 @@
+{
+	"EntrypointInputSourceFile": "./source/Elucidator-Browser-Shim.js",
+
+	"LibraryObjectName": "Elucidator",
+
+	"LibraryOutputFolder": "./dist/",
+
+	"LibraryUniminifiedFileName": "elucidator.js",
+
+	"LibraryMinifiedFileName": "elucidator.min.js"
+}

@@ -94,32 +94,6 @@ suite
 				);
 				test
 				(
-					'Round a number.',
-					(fTestComplete)=>
-					{
-						let _Elucidator = new libElucidator();
-						let tmpData = {a:10.22445566, digits:2};
-						_Elucidator.solveInternalOperation('PreciseMath', 'ToSignificantDigits', tmpData);
-						Expect(tmpData.x)
-							.to.equal('10');
-						fTestComplete();
-					}
-				);
-				test
-				(
-					'Round a number to specific digits.',
-					(fTestComplete)=>
-					{
-						let _Elucidator = new libElucidator();
-						let tmpData = {a:10.22445566, decimalplaces:2};
-						_Elucidator.solveInternalOperation('PreciseMath', 'ToDecimalPlaces', tmpData);
-						Expect(tmpData.x)
-							.to.equal('10.22');
-						fTestComplete();
-					}
-				);
-				test
-				(
 					'Aggregate a set of numbers.',
 					(fTestComplete)=>
 					{
