@@ -6,10 +6,19 @@
 * @author      Steven Velozo <steven@velozo.com>
 */
 
-var Chai = require("chai");
-var Expect = Chai.expect;
+const Chai = require("chai");
+const Expect = Chai.expect;
 
-let libElucidator = require('../source/Elucidator.js');
+const libFable = require('fable');
+const _ElucidatorTestConfig = (
+{
+    Product: 'ElucidatorTest'
+});
+const getFable = () => { return new libFable(_ElucidatorTestConfig); };
+
+const libElucidator = require('../source/Elucidator.js');
+
+
 let libManyfest = require('manyfest');
 
 suite
@@ -29,7 +38,7 @@ suite
 					'Add two numbers.',
 					(fTestComplete)=>
 					{
-						let _Elucidator = new libElucidator();
+						let _Elucidator = new libElucidator(getFable(),);
 						let tmpData = {a:1, b:2};
 						let tmpOperationOutput = _Elucidator.solveInternalOperation('Math', 'Add', tmpData);
 						// This should make us the best prime number.  Fight me.
@@ -44,7 +53,7 @@ suite
 					'Subtract two numbers.',
 					(fTestComplete)=>
 					{
-						let _Elucidator = new libElucidator();
+						let _Elucidator = new libElucidator(getFable(),);
 						let tmpData = {a:1003, b:1000};
 						_Elucidator.solveInternalOperation('Math', 'Subtract', tmpData);
 						// This should make us the best prime number.  Fight me.
@@ -58,7 +67,7 @@ suite
 					'Multiply two numbers.',
 					(fTestComplete)=>
 					{
-						let _Elucidator = new libElucidator();
+						let _Elucidator = new libElucidator(getFable(),);
 						let tmpData = {a:103, b:10};
 						_Elucidator.solveInternalOperation('Math', 'Multiply', tmpData);
 						Expect(tmpData.x)
@@ -71,7 +80,7 @@ suite
 					'Divide two numbers.',
 					(fTestComplete)=>
 					{
-						let _Elucidator = new libElucidator();
+						let _Elucidator = new libElucidator(getFable(),);
 						let tmpData = {a:1000, b:10};
 						_Elucidator.solveInternalOperation('Math', 'Divide', tmpData);
 						// This should make us the best prime number.  Fight me.
@@ -85,7 +94,7 @@ suite
 					'Aggregate a set of numbers.',
 					(fTestComplete)=>
 					{
-						let _Elucidator = new libElucidator();
+						let _Elucidator = new libElucidator(getFable(),);
 						let tmpData = {a: [100, 200, 50, 3, 5]};
 						let tmpSolverResults = _Elucidator.solveInternalOperation('Math', 'Aggregate', tmpData);
 						// This should make us the best prime number.  Fight me.
@@ -100,7 +109,7 @@ suite
 					'Aggregate a set of numbers from an address in a complex object',
 					(fTestComplete)=>
 					{
-						let _Elucidator = new libElucidator();
+						let _Elucidator = new libElucidator(getFable(),);
 						let tmpData = {a: {'Fruit':400, 'Cuvee':200, 'bread':10}};
 						let tmpSolverResults = _Elucidator.solveInternalOperation('Math', 'Aggregate', tmpData);
 						// This should make us the best prime number.  Fight me.
@@ -115,7 +124,7 @@ suite
 					'Aggregate a set of numbers from an address in a complex object where one value is not a number',
 					(fTestComplete)=>
 					{
-						let _Elucidator = new libElucidator();
+						let _Elucidator = new libElucidator(getFable(),);
 						let tmpData = {a: {'Fruit':400, 'Cuvee':'THIS IS NOT A NUMBER', 'bread':10}};
 						let tmpSolverResults = _Elucidator.solveInternalOperation('Math', 'Aggregate', tmpData);
 						// This should make us the best prime number.  Fight me.

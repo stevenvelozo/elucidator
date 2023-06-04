@@ -6,10 +6,19 @@
 * @author      Steven Velozo <steven@velozo.com>
 */
 
-var Chai = require("chai");
-var Expect = Chai.expect;
+const Chai = require("chai");
+const Expect = Chai.expect;
 
-let libElucidator = require('../source/Elucidator.js');
+const libFable = require('fable');
+const _ElucidatorTestConfig = (
+{
+    Product: 'ElucidatorTest'
+});
+const getFable = () => { return new libFable(_ElucidatorTestConfig); };
+
+const libElucidator = require('../source/Elucidator.js');
+
+
 
 suite
 (
@@ -28,7 +37,7 @@ suite
 					'Add two numbers.',
 					(fTestComplete)=>
 					{
-						let _Elucidator = new libElucidator();
+						let _Elucidator = new libElucidator(getFable(),);
 						let tmpData = {a:1, b:2};
 						let tmpOperationOutput = _Elucidator.solveInternalOperation('PreciseMath', 'Add', tmpData);
 						// This should make us the best prime number.  Fight me.
@@ -43,7 +52,7 @@ suite
 					'Subtract two numbers.',
 					(fTestComplete)=>
 					{
-						let _Elucidator = new libElucidator();
+						let _Elucidator = new libElucidator(getFable(),);
 						let tmpData = {a:1003, b:1000};
 						_Elucidator.solveInternalOperation('PreciseMath', 'Subtract', tmpData);
 						// This should make us the best prime number.  Fight me.
@@ -57,7 +66,7 @@ suite
 					'Multiply two numbers.',
 					(fTestComplete)=>
 					{
-						let _Elucidator = new libElucidator();
+						let _Elucidator = new libElucidator(getFable(),);
 						let tmpData = {a:103, b:10};
 						_Elucidator.solveInternalOperation('PreciseMath', 'Multiply', tmpData);
 						Expect(tmpData.x)
@@ -70,7 +79,7 @@ suite
 					'Divide two numbers.',
 					(fTestComplete)=>
 					{
-						let _Elucidator = new libElucidator();
+						let _Elucidator = new libElucidator(getFable(),);
 						let tmpData = {a:1000, b:10};
 						_Elucidator.solveInternalOperation('PreciseMath', 'Divide', tmpData);
 						// This should make us the best prime number.  Fight me.
@@ -84,7 +93,7 @@ suite
 					'Round a number.',
 					(fTestComplete)=>
 					{
-						let _Elucidator = new libElucidator();
+						let _Elucidator = new libElucidator(getFable(),);
 						let tmpData = {a:10.22445566};
 						_Elucidator.solveInternalOperation('PreciseMath', 'Round', tmpData);
 						Expect(tmpData.x)
@@ -97,7 +106,7 @@ suite
 					'Aggregate a set of numbers.',
 					(fTestComplete)=>
 					{
-						let _Elucidator = new libElucidator();
+						let _Elucidator = new libElucidator(getFable(),);
 						let tmpData = {a: [100, 200, 50, 3, 5], precision:12};
 						_Elucidator.solveInternalOperation('PreciseMath', 'SetPrecision', tmpData);
 						let tmpSolverResults = _Elucidator.solveInternalOperation('PreciseMath', 'Aggregate', tmpData);
@@ -113,7 +122,7 @@ suite
 					'Aggregate a precise set of numbers.',
 					(fTestComplete)=>
 					{
-						let _Elucidator = new libElucidator();
+						let _Elucidator = new libElucidator(getFable(),);
 						let tmpData = {a: [100, '200.10293112', 50, '3.01', 5]};
 						let tmpSolverResults = _Elucidator.solveInternalOperation('PreciseMath', 'Aggregate', tmpData);
 						// This should make us the best prime number.  Fight me.
@@ -136,7 +145,7 @@ suite
 					'Execute a basic group by aggregation.',
 					(fTestComplete)=>
 					{
-						let _Elucidator = new libElucidator();
+						let _Elucidator = new libElucidator(getFable(),);
 						let tmpData = {
 							namespace:'PreciseMath',
 							operation:'GroupValuesAndAggregate',

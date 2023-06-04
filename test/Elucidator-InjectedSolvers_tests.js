@@ -6,10 +6,19 @@
 * @author      Steven Velozo <steven@velozo.com>
 */
 
-var Chai = require("chai");
-var Expect = Chai.expect;
+const Chai = require("chai");
+const Expect = Chai.expect;
 
-let libElucidator = require('../source/Elucidator.js');
+const libFable = require('fable');
+const _ElucidatorTestConfig = (
+{
+    Product: 'ElucidatorTest'
+});
+const getFable = () => { return new libFable(_ElucidatorTestConfig); };
+
+const libElucidator = require('../source/Elucidator.js');
+
+
 let libManyfest = require('manyfest');
 
 suite
@@ -29,7 +38,7 @@ suite
 					'Inject a complex multi-instruction solver.',
 					(fTestComplete)=>
 					{
-						let _Elucidator = new libElucidator();
+						let _Elucidator = new libElucidator(getFable(),);
 						let tmpBillSolution = (
 							{
 								"Description":

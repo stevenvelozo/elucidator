@@ -2,7 +2,7 @@
 * @license MIT
 * @author <steven@velozo.com>
 */
-const libSimpleLog = require('./Elucidator-LogToConsole.js');
+const libFableServiceProviderBase = require('fable-serviceproviderbase');
 const libManyfest = require('manyfest');
 const libPrecedent = require('precedent');
 
@@ -13,14 +13,11 @@ const libElucidatorInstructionSet = require('./Elucidator-InstructionSet.js');
 *
 * @class Elucidator
 */
-class Elucidator
+class Elucidator extends libFableServiceProviderBase
 {
-    constructor(pOperations, fInfoLog, fErrorLog)
-    {
-        // Wire in logging
-        this.logInfo = (typeof(fInfoLog) === 'function') ? fInfoLog : libSimpleLog.info;
-        this.logWarning = (typeof(fWarningLog) === 'function') ? fWarningLog : libSimpleLog.warning;
-        this.logError = (typeof(fErrorLog) === 'function') ? fErrorLog : libSimpleLog.error;
+	constructor(pFable, pOptions, pServiceHash)
+	{
+		super(pFable, pOptions, pServiceHash);
 
 		// Instructions are the basic building blocks for operations
 		this.instructionSets = {};
@@ -34,12 +31,12 @@ class Elucidator
 
 		this.loadDefaultInstructionSets();
 
-		if (pOperations)
+		if (this.options.OperationSet)
 		{
-			let tmpSolverHashes = Object.keys(pOperations);
+			let tmpSolverHashes = Object.keys(this.options.OperationSet);
 			for (let i = 0; i < tmpSolverHashes.length; i++)
 			{
-				this.addOperation('Custom',tmpSolverHashes[i], pOperations[tmpSolverHashes[i]]);
+				this.addOperation('Custom',tmpSolverHashes[i], this.options.OperationSet[tmpSolverHashes[i]]);
 			}
 		}
     }
@@ -97,7 +94,7 @@ class Elucidator
 	{
         if (typeof(pNamespace) != 'string')
         {
-            this.logError(`Attempted to add an operation at runtime via Elucidator.addOperation with an invalid namespace; expected a string but the type was ${typeof(pNamespace)}`, pOperation);
+            this.log.error(`Attempted to add an operation at runtime via Elucidator.addOperation with an invalid namespace; expected a string but the type was ${typeof(pNamespace)}`, pOperation);
             return false;
         }
 
@@ -111,7 +108,7 @@ class Elucidator
 	{
 		if (!this.operationExists(pNamespace, pOperationHash))
 		{
-			this.logError(`Attempted to solveInternalOperation for namespace ${pNamespace} operationHash ${pOperationHash} but the operation was not found.`);
+			this.log.error(`Attempted to solveInternalOperation for namespace ${pNamespace} operationHash ${pOperationHash} but the operation was not found.`);
 			// TODO: Should this return something with an error log populated?
 			return false;
 		}
@@ -125,7 +122,7 @@ class Elucidator
 
 		if (typeof(pInputObject) != 'object')
 		{
-            this.logError(`Attempted to run a solve but the passed in Input was not an object.  The type was ${typeof(pInputObject)}.`);
+            this.log.error(`Attempted to run a solve but the passed in Input was not an object.  The type was ${typeof(pInputObject)}.`);
 			return false;
 		}
 		let tmpInputObject = pInputObject;
@@ -342,13 +339,16 @@ class Elucidator
 				tmpInstructionState.logError = 
 					(pMessage) => 
 					{
-						tmpSolutionContext.SolutionLog.push(`[ERROR][Operation ${tmpInstructionState.Operation.Description.Namespace}:${tmpInstructionState.Operation.Description.Hash} - Step #${i}:${tmpStep.Namespace}:${tmpStep.Instruction}] ${pMessage}`)
+						let tmpErrorMessage = `[Operation ${tmpInstructionState.Operation.Description.Namespace}:${tmpInstructionState.Operation.Description.Hash} - Step #${i}:${tmpStep.Namespace}:${tmpStep.Instruction}] ${pMessage}`;
+						this.log.error(tmpErrorMessage)
+						tmpSolutionContext.SolutionLog.push(`[ERROR]${tmpErrorMessage}`)
 					};
 
 				tmpInstructionState.logInfo = 
 					(pMessage) => 
 					{
-						tmpSolutionContext.SolutionLog.push(`[INFO][Operation ${tmpInstructionState.Operation.Description.Namespace}:${tmpInstructionState.Operation.Description.Hash} - Step #${i}:${tmpStep.Namespace}:${tmpStep.Instruction}] ${pMessage}`)
+						let tmpInfoMessage = `[Operation ${tmpInstructionState.Operation.Description.Namespace}:${tmpInstructionState.Operation.Description.Hash} - Step #${i}:${tmpStep.Namespace}:${tmpStep.Instruction}] ${pMessage}`;
+						tmpSolutionContext.SolutionLog.push(`[INFO]${tmpInfoMessage}`)
 					};
 
 				if (this.instructionSets[tmpInstructionState.Namespace].hasOwnProperty(tmpInstructionState.Instruction))

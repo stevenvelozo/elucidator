@@ -6,10 +6,17 @@
 * @author      Steven Velozo <steven@velozo.com>
 */
 
-var Chai = require("chai");
-var Expect = Chai.expect;
+const Chai = require("chai");
+const Expect = Chai.expect;
 
-let libElucidator = require('../source/Elucidator.js');
+const libFable = require('fable');
+const _ElucidatorTestConfig = (
+{
+    Product: 'ElucidatorTest'
+});
+const getFable = () => { return new libFable(_ElucidatorTestConfig); };
+
+const libElucidator = require('../source/Elucidator.js');
 
 suite
 (
@@ -28,7 +35,7 @@ suite
 					'The class should initialize itself into a happy little object.',
 					(fTestComplete)=>
 					{
-						let _Elucidator = new libElucidator({});
+						let _Elucidator = new libElucidator(getFable(),{});
 						Expect(_Elucidator)
 							.to.be.an('object', 'Elucidator should initialize as an object with no parameters.');
 						fTestComplete();
@@ -39,7 +46,7 @@ suite
 					'The class should print an error message with a bad manifest.',
 					(fTestComplete)=>
 					{
-						let _Elucidator = new libElucidator({Scope:'BadManifest', Descriptors:'BadDescriptors'});
+						let _Elucidator = new libElucidator(getFable(),{Scope:'BadManifest', Descriptors:'BadDescriptors'});
 						Expect(_Elucidator)
 							.to.be.an('object', 'Elucidator should initialize as an object with no parameters.');
 						fTestComplete();
@@ -50,7 +57,7 @@ suite
 					'Default properties should be automatically set.',
 					(fTestComplete)=>
 					{
-						let _Elucidator = new libElucidator();
+						let _Elucidator = new libElucidator(getFable());
 						Expect(_Elucidator.instructionSets)
 							.to.be.an('object', 'Elucidator should have instruction sets.');
 						Expect(_Elucidator.operationSets)
@@ -63,36 +70,11 @@ suite
 					'Exercise the default logging.',
 					(fTestComplete)=>
 					{
-						let _Elucidator = new libElucidator();
-						_Elucidator.logError('Error...');
-						_Elucidator.logWarning('Info...');
-						_Elucidator.logInfo('Info...');
-						_Elucidator.logInfo();
-
-						fTestComplete();
-					}
-				);
-				test
-				(
-					'Pass in a custom logger.',
-					(fTestComplete)=>
-					{
-						let tmpLogState = [];
-						let fWriteLog = (pLogLine, pLogObject) =>
-						{
-							tmpLogState.push(pLogLine);
-						};
-
-						let _Elucidator = new libElucidator(undefined, fWriteLog, fWriteLog, fWriteLog);
-						_Elucidator.logError('Error...');
-						Expect(tmpLogState.length)
-							.to.equal(1);
-						Expect(tmpLogState[0])
-							.to.equal('Error...');
-						_Elucidator.logInfo('Info...');
-						_Elucidator.logInfo();
-						Expect(tmpLogState.length)
-							.to.equal(3);
+						let _Elucidator = new libElucidator(getFable());
+						_Elucidator.log.error('Error...');
+						_Elucidator.log.warn('Info...');
+						_Elucidator.log.info('Info...');
+						_Elucidator.log.info();
 
 						fTestComplete();
 					}

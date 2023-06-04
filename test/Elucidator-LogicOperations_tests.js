@@ -6,10 +6,19 @@
 * @author      Steven Velozo <steven@velozo.com>
 */
 
-var Chai = require("chai");
-var Expect = Chai.expect;
+const Chai = require("chai");
+const Expect = Chai.expect;
 
-let libElucidator = require('../source/Elucidator.js');
+const libFable = require('fable');
+const _ElucidatorTestConfig = (
+{
+    Product: 'ElucidatorTest'
+});
+const getFable = () => { return new libFable(_ElucidatorTestConfig); };
+
+const libElucidator = require('../source/Elucidator.js');
+
+
 let libManyfest = require('manyfest');
 
 suite
@@ -29,7 +38,7 @@ suite
 					'Execute a basic operation.',
 					(fTestComplete)=>
 					{
-						let _Elucidator = new libElucidator();
+						let _Elucidator = new libElucidator(getFable(),);
 						let tmpData = {namespace:'Math', operation:'add', a:60, b:33 };
 						let tmpOperationOutput = _Elucidator.solveInternalOperation('Logic', 'Execute', tmpData);
 						Expect(tmpData.x).to.equal(93);
@@ -43,7 +52,7 @@ suite
 					'Execute a different operation.',
 					(fTestComplete)=>
 					{
-						let _Elucidator = new libElucidator();
+						let _Elucidator = new libElucidator(getFable(),);
 						let tmpData = {namespace:'Geometry', operation:'rectanglearea', Width:10, Height:3 };
 						let tmpOperationOutput = _Elucidator.solveInternalOperation('Logic', 'Execute', tmpData);
 						Expect(tmpData.Area).to.equal('30');
@@ -65,7 +74,7 @@ suite
 					'Simple if statement comparing numbers.',
 					(fTestComplete)=>
 					{
-						let _Elucidator = new libElucidator();
+						let _Elucidator = new libElucidator(getFable(),);
 						let tmpData = {leftValue:10, rightValue:10, comparator:'=='};
 						let tmpOperationOutput = _Elucidator.solveInternalOperation('Logic', 'If', tmpData);
 						Expect(tmpData.truthinessResult).to.equal(true);
@@ -79,7 +88,7 @@ suite
 					'Simple if statement comparing numbers where one is a string.',
 					(fTestComplete)=>
 					{
-						let _Elucidator = new libElucidator();
+						let _Elucidator = new libElucidator(getFable(),);
 						let tmpData = {leftValue:10, rightValue:'10', comparator:'=='};
 						let tmpOperationOutput = _Elucidator.solveInternalOperation('Logic', 'If', tmpData);
 						Expect(tmpData.truthinessResult).to.equal(true);
@@ -93,7 +102,7 @@ suite
 					'Simple if statement comparing numbers with the identity operator where one is a string.',
 					(fTestComplete)=>
 					{
-						let _Elucidator = new libElucidator();
+						let _Elucidator = new libElucidator(getFable(),);
 						let tmpData = {leftValue:10, rightValue:'10', comparator:'==='};
 						let tmpOperationOutput = _Elucidator.solveInternalOperation('Logic', 'If', tmpData);
 						Expect(tmpData.truthinessResult).to.equal(false);
@@ -107,7 +116,7 @@ suite
 					'Simple if statement with not equals.',
 					(fTestComplete)=>
 					{
-						let _Elucidator = new libElucidator();
+						let _Elucidator = new libElucidator(getFable(),);
 						let tmpData = {leftValue:10, rightValue:10, comparator:'!='};
 						let tmpOperationOutput = _Elucidator.solveInternalOperation('Logic', 'If', tmpData);
 						Expect(tmpData.truthinessResult).to.equal(false);
@@ -119,7 +128,7 @@ suite
 					'Simple if statement with less than operator.',
 					(fTestComplete)=>
 					{
-						let _Elucidator = new libElucidator();
+						let _Elucidator = new libElucidator(getFable(),);
 						let tmpData = {leftValue:7, rightValue:10, comparator:'<'};
 						let tmpOperationOutput = _Elucidator.solveInternalOperation('Logic', 'If', tmpData);
 						Expect(tmpData.truthinessResult).to.equal(true);
@@ -139,7 +148,7 @@ suite
 					'Complex if statement adding two numbers if true.',
 					(fTestComplete)=>
 					{
-						let _Elucidator = new libElucidator();
+						let _Elucidator = new libElucidator(getFable(),);
 						let tmpData = {leftValue:10, rightValue:10, comparator:'==', trueNamespace:'Math', trueOperation:'Add', a:100, b:215};
 						// Add a and b if this is true
 						let tmpOperationOutput = _Elucidator.solveInternalOperation('Logic', 'If', tmpData);						
@@ -153,7 +162,7 @@ suite
 					'Complex if statement doing nothing if false.',
 					(fTestComplete)=>
 					{
-						let _Elucidator = new libElucidator();
+						let _Elucidator = new libElucidator(getFable(),);
 						let tmpData = {leftValue:10, rightValue:10, comparator:'!=', trueNamespace:'Math', trueOperation:'Add', a:100, b:215};
 						let tmpOperationOutput = _Elucidator.solveInternalOperation('Logic', 'If', tmpData);						
 						Expect(tmpData.truthinessResult).to.equal(false);
@@ -166,7 +175,7 @@ suite
 					'Complex statement -- add if true, subtract if false.',
 					(fTestComplete)=>
 					{
-						let _Elucidator = new libElucidator();
+						let _Elucidator = new libElucidator(getFable(),);
 						let tmpData = (
 							{
 								leftValue:10,

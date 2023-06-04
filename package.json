@@ -1,68 +1,51 @@
 {
-  "name": "elucidator",
-  "version": "1.0.7",
-  "description": "Elucidator solver service and API.",
-  "main": "source/Elucidator.js",
-  "scripts": {
-    "start": "node source/Elucidator.js",
-    "coverage": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -u tdd -R spec",
-    "test": "./node_modules/mocha/bin/_mocha -u tdd -R spec",
-    "docker-dev-build-image": "docker build ./ -t retold/elucidator:local",
-    "docker-dev-run": "docker run -it -d --name elucidator-dev -p 12333:8080 -p 5678:5500 -v \"$PWD/.config:/home/coder/.config\"  -v \"$PWD:/home/coder/elucidator\" -u \"$(id -u):$(id -g)\" -e \"DOCKER_USER=$USER\" retold/elucidator:local",
-    "build": "./node_modules/.bin/gulp build",
-    "build-compatible": "GULP_CUSTOM_BUILD_TARGET=compatible ./node_modules/.bin/gulp build"
-  },
-  "mocha": {
-    "diff": true,
-    "extension": [
-      "js"
-    ],
-    "package": "./package.json",
-    "reporter": "spec",
-    "slow": "75",
-    "timeout": "5000",
-    "ui": "tdd",
-    "watch-files": [
-      "source/**/*.js",
-      "test/**/*.js"
-    ],
-    "watch-ignore": [
-      "lib/vendor"
-    ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://stevenvelozo@github.com/stevenvelozo/elucidator.git"
-  },
-  "author": "steven velozo <steven@velozo.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/stevenvelozo/elucidator/issues"
-  },
-  "homepage": "https://github.com/stevenvelozo/elucidator#readme",
-  "devDependencies": {
-    "@babel/core": "^7.21.5",
-    "@babel/preset-env": "^7.21.5",
-    "@testing-library/dom": "^9.2.0",
-    "async": "^3.2.4",
-    "browserify": "^17.0.0",
-    "chai": "4.3.7",
-    "gulp": "^4.0.2",
-    "gulp-babel": "^8.0.0",
-    "gulp-buble": "^0.9.0",
-    "gulp-sourcemaps": "^3.0.0",
-    "gulp-terser": "^2.1.0",
-    "gulp-util": "^3.0.8",
-    "jsdom": "^21.1.1",
-    "mocha": "10.2.0",
-    "npm-check-updates": "^16.10.9",
-    "nyc": "^15.1.0",
-    "vinyl-buffer": "^1.0.1",
-    "vinyl-source-stream": "^2.0.0"
-  },
-  "dependencies": {
-    "decimal.js": "^10.4.3",
-    "manyfest": "^1.0.17",
-    "precedent": "^1.0.9"
-  }
+    "name": "elucidator",
+    "version": "1.0.7",
+    "description": "Elucidator solver service and API.",
+    "main": "source/Elucidator.js",
+    "scripts": {
+        "start": "node source/Elucidator.js",
+        "coverage": "./node_modules/.bin/nyc --reporter=lcov --reporter=text-lcov ./node_modules/mocha/bin/_mocha -- -u tdd -R spec",
+        "test": "./node_modules/.bin/mocha -u tdd -R spec",
+        "docker-dev-build-image": "docker build ./ -t retold/elucidator:local",
+        "docker-dev-run": "docker run -it -d --name elucidator-dev -p 30001:8080 -p 38086:8086 -v \"$PWD/.config:/home/coder/.config\"  -v \"$PWD:/home/coder/elucidator\" -u \"$(id -u):$(id -g)\" -e \"DOCKER_USER=$USER\" elucidator-image:local",
+        "build": "npx quack build",
+        "docker-dev-build": "docker build ./ -f Dockerfile_LUXURYCode -t elucidator-image:local",
+        "docker-dev-shell": "docker exec -it elucidator-dev /bin/bash"
+    },
+    "mocha": {
+        "diff": true,
+        "extension": [
+            "js"
+        ],
+        "package": "./package.json",
+        "reporter": "spec",
+        "slow": "75",
+        "timeout": "5000",
+        "ui": "tdd",
+        "watch-files": [
+            "source/**/*.js",
+            "test/**/*.js"
+        ],
+        "watch-ignore": [
+            "lib/vendor"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://stevenvelozo@github.com/stevenvelozo/elucidator.git"
+    },
+    "author": "steven velozo <steven@velozo.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/stevenvelozo/elucidator/issues"
+    },
+    "homepage": "https://github.com/stevenvelozo/elucidator#readme",
+    "dependencies": {
+        "decimal.js": "^10.4.3",
+        "fable-serviceproviderbase": "^3.0.7"
+    },
+    "devDependencies": {
+        "quackage": "^1.0.14"
+    }
 }

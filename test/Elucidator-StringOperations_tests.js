@@ -6,10 +6,19 @@
 * @author      Steven Velozo <steven@velozo.com>
 */
 
-var Chai = require("chai");
-var Expect = Chai.expect;
+const Chai = require("chai");
+const Expect = Chai.expect;
 
-let libElucidator = require('../source/Elucidator.js');
+const libFable = require('fable');
+const _ElucidatorTestConfig = (
+{
+    Product: 'ElucidatorTest'
+});
+const getFable = () => { return new libFable(_ElucidatorTestConfig); };
+
+const libElucidator = require('../source/Elucidator.js');
+
+
 let libManyfest = require('manyfest');
 
 suite
@@ -29,7 +38,7 @@ suite
 					'Trim a string.',
 					(fTestComplete)=>
 					{
-						let _Elucidator = new libElucidator();
+						let _Elucidator = new libElucidator(getFable(),);
 						let tmpData = {inputString:'   Weird whitespace abounds. '};
 						let tmpOperationOutput = _Elucidator.solveInternalOperation('String', 'Trim', tmpData);
 						Expect(tmpData.outputString).to.equal('Weird whitespace abounds.');
@@ -43,7 +52,7 @@ suite
 					'Trim an already trim string.',
 					(fTestComplete)=>
 					{
-						let _Elucidator = new libElucidator();
+						let _Elucidator = new libElucidator(getFable(),);
 						let tmpData = {inputString:'No whitespace abounds.'};
 						let tmpOperationOutput = _Elucidator.solveInternalOperation('String', 'Trim', tmpData);
 						Expect(tmpData.outputString).to.equal('No whitespace abounds.');
@@ -55,7 +64,7 @@ suite
 					'Replace a value in a string.',
 					(fTestComplete)=>
 					{
-						let _Elucidator = new libElucidator();
+						let _Elucidator = new libElucidator(getFable(),);
 						let tmpData = {inputString:'No whitespace abounds.', searchFor:'whitespace', replaceWith:'notwhitespace'};
 						let tmpOperationOutput = _Elucidator.solveInternalOperation('String', 'Replace', tmpData);
 						Expect(tmpData.outputString).to.equal('No notwhitespace abounds.');
@@ -67,7 +76,7 @@ suite
 					'Get a substring.',
 					(fTestComplete)=>
 					{
-						let _Elucidator = new libElucidator();
+						let _Elucidator = new libElucidator(getFable(),);
 						let tmpData = {inputString:'No whitespace abounds.', indexStart:8, indexEnd:13};
 						let tmpOperationOutput = _Elucidator.solveInternalOperation('String', 'Substring', tmpData);
 						Expect(tmpData.outputString).to.equal('space');

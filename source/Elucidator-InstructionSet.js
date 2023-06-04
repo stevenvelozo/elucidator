@@ -39,12 +39,12 @@ class ElucidatorInstructionSet
     {
         if (typeof(pInstructionHash) != 'string')
         {
-            this.elucidator.logError(`Attempted to add an instruction with an invalid hash; expected a string but the instruction hash type was ${typeof(pInstructionHash)}`);
+            this.elucidator.log.error(`Attempted to add an instruction with an invalid hash; expected a string but the instruction hash type was ${typeof(pInstructionHash)}`);
             return false;
         }
         if (typeof(fInstructionFunction) != 'function')
         {
-            this.elucidator.logError(`Attempted to add an instruction with an invalid function; expected a function but type was ${typeof(fInstructionFunction)}`);
+            this.elucidator.log.error(`Attempted to add an instruction with an invalid function; expected a function but type was ${typeof(fInstructionFunction)}`);
             return false;
         }
 
@@ -61,7 +61,7 @@ class ElucidatorInstructionSet
         this.addInstruction('noop', 
             (pOperation) =>
             {
-                pOperation.logInfo('Executing a no-operation operation.');
+                pOperation.log.info('Executing a no-operation operation.');
                 return true;
             });
 
@@ -73,23 +73,23 @@ class ElucidatorInstructionSet
     {
         if (typeof(pOperationHash) != 'string')
         {
-            this.elucidator.logError(`Attempted to add an operation with an invalid hash; expected a string but the operation hash type was ${typeof(pOperationHash)}`, pOperation);
+            this.elucidator.log.error(`Attempted to add an operation with an invalid hash; expected a string but the operation hash type was ${typeof(pOperationHash)}`, pOperation);
             return false;
         }
         if (typeof(pOperation) != 'object')
         {
-            this.elucidator.logError(`Attempted to add an invalid operation; expected an object data type but the type was ${typeof(pOperation)}`, pOperation);
+            this.elucidator.log.error(`Attempted to add an invalid operation; expected an object data type but the type was ${typeof(pOperation)}`, pOperation);
             return false;
         }
         // Validate the Description subobject, which is key to functioning.
         if (!pOperation.hasOwnProperty("Description"))
         {
-            this.elucidator.logError(`Attempted to add an operation with an invalid description; no Description subobject set.`, pOperation);
+            this.elucidator.log.error(`Attempted to add an operation with an invalid description; no Description subobject set.`, pOperation);
             return false;
         }
         if (typeof(pOperation.Description) != 'object')
         {
-            this.elucidator.logError(`Attempted to add an operation with an invalid description; Description subobject was not an object.  The type was ${typeof(pOperation.Description)}.`, pOperation);
+            this.elucidator.log.error(`Attempted to add an operation with an invalid description; Description subobject was not an object.  The type was ${typeof(pOperation.Description)}.`, pOperation);
             return false;
         }
         if (typeof(pOperation.Description.Hash) != 'string')
@@ -101,7 +101,7 @@ class ElucidatorInstructionSet
             }
             else
             {
-                this.elucidator.logError(`Attempted to add an operation with an invalid description; Description subobject did not contain a valid Hash which is required to call the operation.`, pOperation);
+                this.elucidator.log.error(`Attempted to add an operation with an invalid description; Description subobject did not contain a valid Hash which is required to call the operation.`, pOperation);
                 return false;
             }
         }
@@ -134,19 +134,19 @@ class ElucidatorInstructionSet
         // TODO: Add a step where we try to load this into Manyfest and see that it's valid.
         if (typeof(pOperation.Inputs) !== 'object')
         {
-            this.elucidator.logError(`Attempted to add an operation with an invalid Inputs object.`, pOperation);
+            this.elucidator.log.error(`Attempted to add an operation with an invalid Inputs object.`, pOperation);
             return false;
         }
         // If there are no inputs, or outputs, or steps, add them.
         // TODO: Add a step where we try to load this into Manyfest and see that it's valid.
         if (typeof(pOperation.Outputs) !== 'object')
         {
-            this.elucidator.logError(`Attempted to add an operation with an invalid Outputs object.`, pOperation);
+            this.elucidator.log.error(`Attempted to add an operation with an invalid Outputs object.`, pOperation);
             return false;
         }
         if (!Array.isArray(pOperation.Steps))
         {
-            this.elucidator.logError(`Attempted to add an operation with an invalid Steps array.`, pOperation);
+            this.elucidator.log.error(`Attempted to add an operation with an invalid Steps array.`, pOperation);
             return false;
         }
 
