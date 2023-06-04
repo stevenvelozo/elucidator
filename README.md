@@ -10,7 +10,71 @@ Similarly with this Solver library/API:
 
 > With a Solution Abstraction Library pattern it should be trivial to change the underlying method for computing composite values without having to rewrite front-end software.
 
+## Basic Usage
 
+Elucidator is a fable service.  It can be initialized either directly, with a passed-in fable.  Or.  As a full-fledged service (which is a preferable pattern, as it will be accessible to other fable services then).
+
+### Initializing the Library Directly
+
+```
+const libFable = require('fable');
+const libElucidator = require('elucidator');
+
+let _Fable = new libFable();
+let _Elucidator = new libElucidator(_Fable);
+
+let tmpInput = { a: 10, b: 3 };
+
+let tmpInstructionSet = 'PreciseMath';
+let tmpInstruction = 'Add';
+
+console.log(`Testing instruction [${tmpInstructionSet}]::[${tmpInstruction}] with the following data: ${JSON.stringify(tmpInput)}`);
+
+_Elucidator.solveInternalOperation(tmpInstructionSet, tmpInstruction, tmpInput);
+
+console.log(`Outcome: ${JSON.stringify(tmpInput)}`);
+```
+
+Which produces the output:
+
+```
+Testing instruction [PreciseMath]::[Add] with the following data: {"a":10,"b":3}
+Outcome: {"a":10,"b":3,"x":"13"}
+```
+
+What an insanely complex way to add two numbers!
+
+### Initializing the Library as a Fable Service
+
+Fable services are meant to be composable single-purpose modules.  Service in this case doesn't mean API or web service; it means there are shared functionality with well defined interfaces.  For instance, this library leverages a few fable services to function: logging, object manifest navigation and metatemplating.
+
+```
+const libFable = require('fable');
+
+let _Fable = new libFable();
+
+let _Elucidator = _Fable.serviceManager.addAndInstantiateServiceType('Solver', require('elucidator'));
+
+let tmpInput = { a: 10, b: 3 };
+
+let tmpInstructionSet = 'PreciseMath';
+let tmpInstruction = 'Add';
+
+console.log(`Testing instruction [${tmpInstructionSet}]::[${tmpInstruction}] with the following data: ${JSON.stringify(tmpInput)}`);
+
+_Elucidator.solveInternalOperation(tmpInstructionSet, tmpInstruction, tmpInput);
+
+console.log(`Outcome: ${JSON.stringify(tmpInput)}`);
+```
+
+Which again produces the output:
+
+```
+Testing instruction [PreciseMath]::[Add] with the following data: {"a":10,"b":3}
+Outcome: {"a":10,"b":3,"x":"13"}
+```
+
+Still an insanely complex way to add two numbers.  Anyhow, there are a number of mechanisms for adding the library as a fable service and initializing it (including keeping track of multiple solvers that interact with each other).  Leveraging fable services are documented in the fable documentation; either of these initialization methods work.
 
 ## Operations and Instructions
 

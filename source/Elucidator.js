@@ -3,9 +3,6 @@
 * @author <steven@velozo.com>
 */
 const libFableServiceProviderBase = require('fable-serviceproviderbase');
-const libManyfest = require('manyfest');
-const libPrecedent = require('precedent');
-
 const libElucidatorInstructionSet = require('./Elucidator-InstructionSet.js');
 
 /**
@@ -193,7 +190,7 @@ class Elucidator extends libFableServiceProviderBase
 		if (typeof(pDescriptionManyfest) === 'undefined')
 		{
 			// We are going to use this for some clever schema manipulations, then recreate the object
-			tmpDescriptionManyfest = new libManyfest();
+			tmpDescriptionManyfest = this.fable.serviceManager.instantiateServiceProviderWithoutRegistration('Manifest');
 			// Synthesize a manyfest from the Input and Output properties
 			let tmpManyfestSchema = (
 				{
@@ -234,7 +231,7 @@ class Elucidator extends libFableServiceProviderBase
 			tmpSolutionContext.SolutionLog.push(`[${tmpOperation.UUID}]: Solver running operation ${tmpOperation.Description.Synopsys}`);
 		}
 
-		let tmpPrecedent = new libPrecedent();
+		let tmpPrecedent = this.fable.serviceManager.instantiateServiceProviderWithoutRegistration('MetaTemplate');
 		tmpPrecedent.addPattern('{{Name:', '}}',
 			(pHash)=>
 			{
@@ -297,7 +294,7 @@ class Elucidator extends libFableServiceProviderBase
 					});
 				// Perform step-specific address mappings.
 				tmpDescriptionManyfest.schemaManipulations.resolveAddressMappings(tmpInputSchema.Descriptors, tmpStep.InputHashAddressMap);
-				let tmpInputManyfest = new libManyfest(tmpInputSchema);
+				let tmpInputManyfest = this.fable.serviceManager.instantiateServiceProviderWithoutRegistration('Manifest', tmpInputSchema);
 				if (tmpSolutionContext.InputHashMapping)
 				{
 					tmpInputManyfest.hashTranslations.addTranslation(tmpSolutionContext.InputHashMapping);
@@ -309,7 +306,7 @@ class Elucidator extends libFableServiceProviderBase
 						"Descriptors": JSON.parse(JSON.stringify(tmpOperation.Outputs))
 					});
 					tmpDescriptionManyfest.schemaManipulations.resolveAddressMappings(tmpOutputSchema.Descriptors, tmpStep.OutputHashAddressMap);
-				let tmpOutputManyfest = new libManyfest(tmpOutputSchema);
+				let tmpOutputManyfest = this.fable.serviceManager.instantiateServiceProviderWithoutRegistration('Manifest', tmpOutputSchema);
 				if (tmpSolutionContext.OutputHashMapping)
 				{
 					tmpOutputManyfest.hashTranslations.addTranslation(tmpSolutionContext.OutputHashMapping);

@@ -75,6 +75,7 @@ suite
 						_Elucidator.log.warn('Info...');
 						_Elucidator.log.info('Info...');
 						_Elucidator.log.info();
+						_Elucidator.log.info(`The previous log message in ${_Elucidator.Hash} for info should be undefined since that's what is passed in.`);
 
 						fTestComplete();
 					}
