@@ -46,6 +46,6 @@
         "fable-serviceproviderbase": "^3.0.7"
     },
     "devDependencies": {
-        "quackage": "^1.0.14"
+        "quackage": "^1.1.0"
     }
 }
