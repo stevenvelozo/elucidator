@@ -4,7 +4,7 @@
     ],
     "SourceContentCatalog": {
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.babelrc": {
-            "UUID": "bf436bd1-b452-4e6e-a876-11f944ab4f7e",
+            "UUID": "7abf5e14-c064-45ed-a6c5-8bdcdb455372",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.babelrc",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.babelrc",
@@ -39,7 +39,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.browserslistrc": {
-            "UUID": "031d24e4-31d4-44fa-adca-72de3eaf0244",
+            "UUID": "81f43e22-ce4f-4167-ab9c-a3ef78b40aef",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.browserslistrc",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.browserslistrc",
@@ -74,7 +74,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/code-server/config.yaml": {
-            "UUID": "60e90f8c-2c07-4451-a71f-2d8ae6e1b96f",
+            "UUID": "9ba6474d-68e2-4da2-a325-c2387cd856ca",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/code-server/config.yaml",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/code-server/config.yaml",
@@ -112,7 +112,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/configstore/update-notifier-npm-check-updates.json": {
-            "UUID": "5304daee-2645-49c6-a914-26bb07f2d71f",
+            "UUID": "da6e0295-898f-4ea0-bec9-dcea49c38ae2",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/configstore/update-notifier-npm-check-updates.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/configstore/update-notifier-npm-check-updates.json",
@@ -154,7 +154,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/configstore/update-notifier-npm.json": {
-            "UUID": "1d86e6e0-5d39-490c-b287-b128285f0f64",
+            "UUID": "6f3ada12-37c0-41a0-8ce8-d86f3ab2f10c",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/configstore/update-notifier-npm.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/configstore/update-notifier-npm.json",
@@ -194,7 +194,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/.vscode/launch.json": {
-            "UUID": "3b9d2832-eba4-4b89-9f45-c661e3e1bcce",
+            "UUID": "b4fce70d-0407-4962-bc7d-e7cc11efea1c",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/.vscode/launch.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/.vscode/launch.json",
@@ -233,7 +233,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/Dockerfile": {
-            "UUID": "cfedf96e-319a-4a90-89eb-9efbff9e78fc",
+            "UUID": "09e0f476-dd51-4acf-a229-716ebe1765b3",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/Dockerfile",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/Dockerfile",
@@ -271,7 +271,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/Dockerfile_LUXURYCode": {
-            "UUID": "57be5d21-f6cd-4edd-9e47-9d64dcc2efa0",
+            "UUID": "64d02789-634b-46c1-9c4d-a035cf394f04",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/Dockerfile_LUXURYCode",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/Dockerfile_LUXURYCode",
@@ -310,7 +310,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/MySQL/Dockerfile": {
-            "UUID": "d61393e0-a77b-46ed-84df-9c9ccb41efe6",
+            "UUID": "ab84e650-ee40-440e-b2cf-c703be8b7464",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/MySQL/Dockerfile",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/MySQL/Dockerfile",
@@ -349,7 +349,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/MySQL/Dockerfile_LUXURYCODE": {
-            "UUID": "d1b6ec48-8d2b-43ab-b749-ae6c3cc89f2a",
+            "UUID": "e03b2719-fb10-46d5-8b82-ee32bc08962b",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/MySQL/Dockerfile_LUXURYCODE",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/MySQL/Dockerfile_LUXURYCODE",
@@ -389,7 +389,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/MySQL/MySQL-Laden-Entry.sh": {
-            "UUID": "2a66e54b-d5ab-4917-995e-2029755ab93c",
+            "UUID": "674c5211-d6d4-4502-a2b4-9a432b0c6c4f",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/MySQL/MySQL-Laden-Entry.sh",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/MySQL/MySQL-Laden-Entry.sh",
@@ -430,7 +430,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/MySQL/MySQL-Security.sql": {
-            "UUID": "5e94df08-0c2c-420a-a4c1-7f6cd690664a",
+            "UUID": "f2237f39-535c-4eb7-8d60-08af30269484",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/MySQL/MySQL-Security.sql",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/MySQL/MySQL-Security.sql",
@@ -470,7 +470,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/ddl/BookStore.ddl": {
-            "UUID": "ea655756-390d-45fc-ae29-c90e58f09b3f",
+            "UUID": "d7aef990-70f6-4151-9475-9c86d4049d61",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/ddl/BookStore.ddl",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/ddl/BookStore.ddl",
@@ -510,7 +510,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/documentation/Dictionary.md": {
-            "UUID": "75f01088-0e02-4eb3-8b6a-4fb2b2f6377a",
+            "UUID": "817c92de-a4fb-4469-bd61-f7ad069ffae4",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/documentation/Dictionary.md",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/documentation/Dictionary.md",
@@ -550,7 +550,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/documentation/Model-Author.md": {
-            "UUID": "2ecbf7bb-d23f-4936-a1e6-88b7e21faf27",
+            "UUID": "60c8b7d4-8376-40d2-b61e-0434121c1972",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/documentation/Model-Author.md",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/documentation/Model-Author.md",
@@ -591,7 +591,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/documentation/Model-Book.md": {
-            "UUID": "0c55ce8a-cd17-440a-8128-3535a28e93a4",
+            "UUID": "d926d5f4-f0fe-4bd5-ac8e-1a33f7cd242b",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/documentation/Model-Book.md",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/documentation/Model-Book.md",
@@ -632,7 +632,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/documentation/Model-BookAuthorJoin.md": {
-            "UUID": "6f42eae4-24fc-4e48-b71c-a588d6cab789",
+            "UUID": "f6c1f6d4-67ca-4170-96e5-855a862412d9",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/documentation/Model-BookAuthorJoin.md",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/documentation/Model-BookAuthorJoin.md",
@@ -673,7 +673,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/documentation/Model-BookPrice.md": {
-            "UUID": "a1c6d544-e835-4128-a8ed-81888f382b0c",
+            "UUID": "f032d19b-f430-4274-bab2-a6690527f617",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/documentation/Model-BookPrice.md",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/documentation/Model-BookPrice.md",
@@ -714,7 +714,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/documentation/Model-Review.md": {
-            "UUID": "74306f8b-41a9-4c98-907c-8652d199ca56",
+            "UUID": "e9ee2cfe-ad91-45e6-9992-daef4bb9f7f8",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/documentation/Model-Review.md",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/documentation/Model-Review.md",
@@ -755,7 +755,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/documentation/ModelChangeTracking.md": {
-            "UUID": "1b116c3f-9031-4918-9460-9a71b5a8ecb9",
+            "UUID": "272169fd-45fa-4db4-8939-11e0c0186511",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/documentation/ModelChangeTracking.md",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/documentation/ModelChangeTracking.md",
@@ -795,7 +795,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/documentation/README.md": {
-            "UUID": "df16f1eb-2d6f-4a8f-9c88-5a8ac7e7842a",
+            "UUID": "f4de8784-8059-4876-b3ac-b734fcfc7f5f",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/documentation/README.md",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/documentation/README.md",
@@ -835,7 +835,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/documentation/diagram/README.md": {
-            "UUID": "9c2b864f-76d1-4f14-907a-da7e340d4233",
+            "UUID": "94a646e3-bcd1-4755-aeed-a30b3b333061",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/documentation/diagram/README.md",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/documentation/diagram/README.md",
@@ -876,7 +876,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/documentation/diagram/Stricture_Output.dot": {
-            "UUID": "4b568620-2c35-43ae-b6f4-822907e33ced",
+            "UUID": "f138a7e8-3e76-40d8-89ac-aa2cc0f8ec80",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/documentation/diagram/Stricture_Output.dot",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/documentation/diagram/Stricture_Output.dot",
@@ -918,7 +918,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/documentation/diagram/Stricture_Output.png": {
-            "UUID": "1b9c0234-be93-4e4a-8b61-901ccaa898b5",
+            "UUID": "9092b11d-5c20-4a14-9e1a-8839383d576d",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/documentation/diagram/Stricture_Output.png",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/documentation/diagram/Stricture_Output.png",
@@ -960,7 +960,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/json_schema_entities/BookStore-MeadowSchema-Author.json": {
-            "UUID": "cca66880-e792-4e41-ba91-7669faf478c2",
+            "UUID": "507971ce-619a-462a-8a34-eac38f6285fd",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/json_schema_entities/BookStore-MeadowSchema-Author.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/json_schema_entities/BookStore-MeadowSchema-Author.json",
@@ -1002,7 +1002,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/json_schema_entities/BookStore-MeadowSchema-Book.json": {
-            "UUID": "2e06b82c-4815-4eed-8f29-7827b5b62100",
+            "UUID": "f948dcb0-1449-4098-a2fc-2db78c15eced",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/json_schema_entities/BookStore-MeadowSchema-Book.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/json_schema_entities/BookStore-MeadowSchema-Book.json",
@@ -1044,7 +1044,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/json_schema_entities/BookStore-MeadowSchema-BookAuthorJoin.json": {
-            "UUID": "0e2eac33-32a2-48f6-9edf-b7f7f37ce776",
+            "UUID": "1578baf1-3dc0-48aa-8df7-dac082a9080d",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/json_schema_entities/BookStore-MeadowSchema-BookAuthorJoin.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/json_schema_entities/BookStore-MeadowSchema-BookAuthorJoin.json",
@@ -1086,7 +1086,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/json_schema_entities/BookStore-MeadowSchema-BookPrice.json": {
-            "UUID": "bcb90a85-c62f-41a9-8e59-aa7dafe0bb7d",
+            "UUID": "48d14ab2-24f0-4a9e-aa1f-5f3a66c519d1",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/json_schema_entities/BookStore-MeadowSchema-BookPrice.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/json_schema_entities/BookStore-MeadowSchema-BookPrice.json",
@@ -1128,7 +1128,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/json_schema_entities/BookStore-MeadowSchema-Review.json": {
-            "UUID": "18afee72-e00e-4603-bd32-fcaa5607e028",
+            "UUID": "bdbb8752-8f03-4441-81d7-ef61b5bd9186",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/json_schema_entities/BookStore-MeadowSchema-Review.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/json_schema_entities/BookStore-MeadowSchema-Review.json",
@@ -1170,7 +1170,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/json_schema_entities/README.md": {
-            "UUID": "c9e0c9b3-30e1-4c22-955d-d01b87fa7e24",
+            "UUID": "1448d2db-d86e-4c6d-8c10-5fdec689df24",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/json_schema_entities/README.md",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/json_schema_entities/README.md",
@@ -1210,7 +1210,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/json_schema_model/BookStore-Extended.json": {
-            "UUID": "de490204-469e-467c-a638-92a6a7bfd815",
+            "UUID": "cce1b7df-1f67-492c-ba97-0399e5fa5be6",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/json_schema_model/BookStore-Extended.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/json_schema_model/BookStore-Extended.json",
@@ -1251,7 +1251,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/json_schema_model/BookStore-PICT.json": {
-            "UUID": "f3a9b17f-1db8-4a0f-9b9a-d7f8003f9166",
+            "UUID": "ed42ff09-ad4c-49f3-a7f4-7da2f65b09f8",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/json_schema_model/BookStore-PICT.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/json_schema_model/BookStore-PICT.json",
@@ -1292,7 +1292,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/json_schema_model/BookStore.json": {
-            "UUID": "0de94cfa-5a53-43eb-87af-206fc5b22219",
+            "UUID": "908c00ad-186b-4050-a426-f0e959403f20",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/json_schema_model/BookStore.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/json_schema_model/BookStore.json",
@@ -1332,7 +1332,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/json_schema_model/README.md": {
-            "UUID": "56804a0b-61ad-42c8-93f2-f955cf74cadf",
+            "UUID": "8fb23c6e-76a2-4e56-8d88-5b49c79f7536",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/json_schema_model/README.md",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/json_schema_model/README.md",
@@ -1372,7 +1372,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/mysql_create/BookStore-CreateDatabase.mysql.sql": {
-            "UUID": "64b619a4-a07a-4004-86e2-b9c24d38a43f",
+            "UUID": "01dbcb78-3834-4edc-af18-e17c5e263016",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/mysql_create/BookStore-CreateDatabase.mysql.sql",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/mysql_create/BookStore-CreateDatabase.mysql.sql",
@@ -1414,7 +1414,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/mysql_create/README.md": {
-            "UUID": "432d8e0d-0855-4793-88a1-f12b915f4bfc",
+            "UUID": "38cfecf5-6ca2-41ea-807b-cecf297e0efb",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/mysql_create/README.md",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.config/luxury-extras/model/mysql_create/README.md",
@@ -1454,7 +1454,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.gitignore": {
-            "UUID": "6d3676f6-6228-4109-b9eb-1f92f2ffa158",
+            "UUID": "53d61784-bb1a-48be-b98c-dfe8976bb379",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.gitignore",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.gitignore",
@@ -1489,7 +1489,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.vscode/launch.json": {
-            "UUID": "a5fb7ba0-394b-4a59-aa54-0f5f038c3076",
+            "UUID": "891f8639-0188-490a-962c-9fd7cf02d963",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/.vscode/launch.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/.vscode/launch.json",
@@ -1526,7 +1526,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/Dockerfile": {
-            "UUID": "9bacbe87-dd6a-40f3-9c85-36250babc968",
+            "UUID": "ea643de2-b382-4172-8643-dc56bf1a7dd1",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/Dockerfile",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/Dockerfile",
@@ -1562,7 +1562,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/LICENSE": {
-            "UUID": "e82e09d2-9954-478c-a6ae-1d5f1dba8509",
+            "UUID": "fbe42e70-a843-4ee3-9eb8-37ce1cec9d5a",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/LICENSE",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/LICENSE",
@@ -1598,7 +1598,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/README.md": {
-            "UUID": "4846c2b7-bca2-4f24-aa2d-6eee083b506d",
+            "UUID": "52312d4b-b5e7-404c-8055-a1c16a6caafc",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/README.md",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/README.md",
@@ -1634,7 +1634,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/debug/Harness.js": {
-            "UUID": "1ea9b7ac-cd46-43ac-940a-7f6467d2fae3",
+            "UUID": "dc8cacfe-0fea-4cdb-87bf-7889b2f473ed",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/debug/Harness.js",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/debug/Harness.js",
@@ -1671,7 +1671,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/dist/elucidator.compatible.js": {
-            "UUID": "10104b6e-9a19-485b-b325-0c0b89fe770d",
+            "UUID": "5eeaf377-0a17-4c55-81f3-7c24e53b81f5",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/dist/elucidator.compatible.js",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/dist/elucidator.compatible.js",
@@ -1709,7 +1709,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/dist/elucidator.compatible.min.js": {
-            "UUID": "ebd1e403-2e0b-4a2d-8fa1-a13047d926c9",
+            "UUID": "023739ce-4928-47b2-9beb-42a29cd3dde3",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/dist/elucidator.compatible.min.js",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/dist/elucidator.compatible.min.js",
@@ -1748,7 +1748,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/dist/elucidator.compatible.min.js.map": {
-            "UUID": "46b8e8d0-5b89-4e13-a2de-e3d7c707a66d",
+            "UUID": "6c202403-17b3-4af9-8306-c5a69c0e0214",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/dist/elucidator.compatible.min.js.map",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/dist/elucidator.compatible.min.js.map",
@@ -1788,7 +1788,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/dist/elucidator.js": {
-            "UUID": "dd558bf7-a178-4989-82ab-236a3d3baed7",
+            "UUID": "418785f6-7714-40f3-bc2e-95183ba97a23",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/dist/elucidator.js",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/dist/elucidator.js",
@@ -1825,7 +1825,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/dist/elucidator.min.js": {
-            "UUID": "f258e0e1-4984-4b95-9416-02dde5cd79bf",
+            "UUID": "7fea8f1b-67bb-4e5c-bc0b-9963e4ee735d",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/dist/elucidator.min.js",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/dist/elucidator.min.js",
@@ -1863,7 +1863,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/dist/elucidator.min.js.map": {
-            "UUID": "e0516d9d-2701-4350-bdcb-f9917c0f36e7",
+            "UUID": "863de7ec-2f2e-41d5-945b-c932e84417e3",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/dist/elucidator.min.js.map",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/dist/elucidator.min.js.map",
@@ -1902,7 +1902,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/dist/indoctrinate_content_staging/Indoctrinate-Catalog-AppData.json": {
-            "UUID": "228364b8-f2d5-4e1c-9886-89f3a9e98fb7",
+            "UUID": "fc8f06c1-33b4-41f2-a0eb-e9f142a52144",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/dist/indoctrinate_content_staging/Indoctrinate-Catalog-AppData.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/dist/indoctrinate_content_staging/Indoctrinate-Catalog-AppData.json",
@@ -1936,13 +1936,123 @@
             "FSTAT": {
                 "Size": 502,
                 "Created": "2026-04-09T23:24:25.087Z",
-                "Modified": "2026-04-09T23:24:25.297Z",
-                "Accessed": "2026-04-09T23:24:25.087Z",
+                "Modified": "2026-04-10T01:50:33.556Z",
+                "Accessed": "2026-04-09T23:28:39.133Z",
+                "Mode": 33188
+            }
+        },
+        "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/docs/.nojekyll": {
+            "UUID": "ddb3dda6-c4de-4dbe-8ced-e1e026c54cf3",
+            "Type": "URI",
+            "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/docs/.nojekyll",
+            "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/docs/.nojekyll",
+            "Location": "/Users/steven/Code/retold/modules/utility/elucidator/docs",
+            "Name": ".nojekyll",
+            "MimeType": null,
+            "Nature": "UNKNOWN",
+            "Format": "UNKNOWN",
+            "Schema": "Default",
+            "Content": false,
+            "Labels": [
+                "__LABELSET_TYPE",
+                "FILE",
+                "__LABELSET_ADDRESS",
+                "docs",
+                "__LABELSET_NAME",
+                "__LABELSET_EXTENSION",
+                "",
+                "__LABELSET_FILENAME",
+                ".nojekyll",
+                "__LABELSET_FULLPATH",
+                "FILE://Users/steven/Code/retold/modules/utility/elucidator/docs/.nojekyll",
+                "__LABELSET_FORMAT",
+                "UNKNOWN",
+                "Default"
+            ],
+            "FSTAT": {
+                "Created": "2026-04-09T23:24:25.357Z",
+                "Modified": "2026-04-09T23:24:25.364Z",
+                "Accessed": "2026-04-09T23:24:25.357Z",
+                "Mode": 33188
+            }
+        },
+        "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/docs/css/docuserve.css": {
+            "UUID": "6562f6ee-174c-42e8-8424-79a52203f01e",
+            "Type": "URI",
+            "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/docs/css/docuserve.css",
+            "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/docs/css/docuserve.css",
+            "Location": "/Users/steven/Code/retold/modules/utility/elucidator/docs/css",
+            "Name": "docuserve.css",
+            "MimeType": "text/css",
+            "Nature": "text",
+            "Format": "css",
+            "Schema": "Default",
+            "Content": false,
+            "Labels": [
+                "__LABELSET_TYPE",
+                "FILE",
+                "__LABELSET_ADDRESS",
+                "docs",
+                "css",
+                "__LABELSET_NAME",
+                "docuserve",
+                "__LABELSET_EXTENSION",
+                ".css",
+                "__LABELSET_FILENAME",
+                "docuserve.css",
+                "__LABELSET_FULLPATH",
+                "FILE://Users/steven/Code/retold/modules/utility/elucidator/docs/css/docuserve.css",
+                "__LABELSET_FORMAT",
+                "css",
+                "Default"
+            ],
+            "FSTAT": {
+                "Size": 1263,
+                "Created": "2026-03-10T18:01:03.404Z",
+                "Modified": "2026-04-09T23:24:25.359Z",
+                "Accessed": "2026-04-09T23:28:39.146Z",
+                "Mode": 33188
+            }
+        },
+        "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/docs/index.html": {
+            "UUID": "b3360f2f-86bc-4ffc-953c-5aa6161a4d94",
+            "Type": "URI",
+            "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/docs/index.html",
+            "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/docs/index.html",
+            "Location": "/Users/steven/Code/retold/modules/utility/elucidator/docs",
+            "Name": "index.html",
+            "MimeType": "text/html",
+            "Nature": "text",
+            "Format": "html",
+            "Schema": "Default",
+            "Content": false,
+            "Labels": [
+                "__LABELSET_TYPE",
+                "FILE",
+                "__LABELSET_ADDRESS",
+                "docs",
+                "__LABELSET_NAME",
+                "index",
+                "__LABELSET_EXTENSION",
+                ".html",
+                "__LABELSET_FILENAME",
+                "index.html",
+                "__LABELSET_FULLPATH",
+                "FILE://Users/steven/Code/retold/modules/utility/elucidator/docs/index.html",
+                "__LABELSET_FORMAT",
+                "html",
+                "Default"
+            ],
+            "FSTAT": {
+                "Size": 1652,
+                "Created": "2026-03-10T18:01:03.421Z",
+                "Modified": "2026-04-09T23:24:25.358Z",
+                "Accessed": "2026-04-09T23:28:39.146Z",
                 "Mode": 33188
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/docs/retold-catalog.json": {
-            "UUID": "85b3863e-af9b-430a-9c93-7cd9f5d6290f",
+            "UUID": "5e8506fe-5da0-4c94-8373-e724592fd166",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/docs/retold-catalog.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/docs/retold-catalog.json",
@@ -1972,15 +2082,54 @@
                 "Default"
             ],
             "FSTAT": {
-                "Size": 1464,
+                "Size": 1770,
                 "Created": "2026-04-09T23:24:25.102Z",
-                "Modified": "2026-04-09T23:24:25.102Z",
-                "Accessed": "2026-04-09T23:24:25.102Z",
+                "Modified": "2026-04-10T01:50:33.336Z",
+                "Accessed": "2026-04-09T23:28:39.146Z",
+                "Mode": 33188
+            }
+        },
+        "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/docs/retold-keyword-index.json": {
+            "UUID": "b486d12d-a200-4bbc-8e8a-c9e97a43d6b6",
+            "Type": "URI",
+            "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/docs/retold-keyword-index.json",
+            "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/docs/retold-keyword-index.json",
+            "Location": "/Users/steven/Code/retold/modules/utility/elucidator/docs",
+            "Name": "retold-keyword-index.json",
+            "MimeType": "application/json",
+            "Nature": "application",
+            "Format": "json",
+            "Schema": "Default",
+            "Content": false,
+            "Labels": [
+                "__LABELSET_TYPE",
+                "FILE",
+                "__LABELSET_ADDRESS",
+                "docs",
+                "__LABELSET_NAME",
+                "retold",
+                "keyword",
+                "index",
+                "__LABELSET_EXTENSION",
+                ".json",
+                "__LABELSET_FILENAME",
+                "retold-keyword-index.json",
+                "__LABELSET_FULLPATH",
+                "FILE://Users/steven/Code/retold/modules/utility/elucidator/docs/retold-keyword-index.json",
+                "__LABELSET_FORMAT",
+                "json",
+                "Default"
+            ],
+            "FSTAT": {
+                "Size": 269,
+                "Created": "2026-04-09T23:24:25.307Z",
+                "Modified": "2026-04-09T23:24:25.307Z",
+                "Accessed": "2026-04-09T23:28:39.146Z",
                 "Mode": 33188
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/package-lock.json": {
-            "UUID": "0cfd75af-b91d-4339-8e4d-d13f2ea3ffcf",
+            "UUID": "a3e16fc7-29d9-4e2c-b4e1-d9ad929c5355",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/package-lock.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/package-lock.json",
@@ -2017,7 +2166,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/package.json": {
-            "UUID": "bf6e6dbf-2217-4374-8ebd-ee38f45bddd0",
+            "UUID": "a8422b0e-d596-4121-a9d2-6c249a1182b5",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/package.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/package.json",
@@ -2103,7 +2252,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/Elucidator-Browser-Shim.js": {
-            "UUID": "a4376c47-28bc-4b15-87a5-f7552b9707ff",
+            "UUID": "ec15df6f-fb27-4ab5-81fb-c223977f37e1",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/Elucidator-Browser-Shim.js",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/source/Elucidator-Browser-Shim.js",
@@ -2142,7 +2291,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/Elucidator-InstructionSet.js": {
-            "UUID": "636fa01a-c1a7-4c4f-af96-7391c7d34a02",
+            "UUID": "113039a1-a255-4270-9433-af7f3297c9f4",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/Elucidator-InstructionSet.js",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/source/Elucidator-InstructionSet.js",
@@ -2180,7 +2329,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/Elucidator.js": {
-            "UUID": "bdd58c7f-b3c9-4464-a91c-2b30c642acdb",
+            "UUID": "c501870e-acc1-4339-9f98-97a89f397a01",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/Elucidator.js",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/source/Elucidator.js",
@@ -2217,7 +2366,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Geometry.js": {
-            "UUID": "624d637a-7e71-4305-9086-4384463cb813",
+            "UUID": "0babcbec-323f-4e7f-a40b-a9e958fe27c3",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Geometry.js",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Geometry.js",
@@ -2255,7 +2404,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Logic.js": {
-            "UUID": "cb6a9ec4-9109-4170-a44b-599c947c68cc",
+            "UUID": "f32cbdb6-0077-4c65-bef3-f2ea47c5cfeb",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Logic.js",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Logic.js",
@@ -2293,7 +2442,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Math-Javascript.js": {
-            "UUID": "eccb2618-9a0f-43de-9ca8-2b4bc25e9ddc",
+            "UUID": "52d43f7e-da39-4403-bc49-dea2045ccf6b",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Math-Javascript.js",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Math-Javascript.js",
@@ -2332,7 +2481,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/Geometry-RectangleArea.json": {
-            "UUID": "59db28fb-2efd-463c-9cec-b9a4679f84de",
+            "UUID": "7b8a5db1-35e0-474c-ad78-555e8c31877f",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/Geometry-RectangleArea.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/Geometry-RectangleArea.json",
@@ -2372,7 +2521,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/Logic-Execute.json": {
-            "UUID": "28d5fa89-c18b-466f-91ed-b8c4e067afbb",
+            "UUID": "b9b07acc-1e79-427e-b20e-7d85ec92ddab",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/Logic-Execute.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/Logic-Execute.json",
@@ -2412,7 +2561,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/Logic-If.json": {
-            "UUID": "c269c4d2-c49b-4ded-b338-474fccc7f9a7",
+            "UUID": "8e899743-8dee-4c31-a4a5-4cc0d8ce2802",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/Logic-If.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/Logic-If.json",
@@ -2452,7 +2601,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/Math-Add.json": {
-            "UUID": "70d6809b-2e0c-41ef-9a91-875c30aa2f36",
+            "UUID": "242992f7-5d20-423a-ac89-696b08811e46",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/Math-Add.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/Math-Add.json",
@@ -2492,7 +2641,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/Math-Aggregate.json": {
-            "UUID": "2943529f-9634-4e62-b357-c9933a2edf62",
+            "UUID": "66f760e1-efc0-474b-bcb6-3c3687de5a08",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/Math-Aggregate.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/Math-Aggregate.json",
@@ -2532,7 +2681,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/Math-Divide.json": {
-            "UUID": "64ccc600-f2b2-4b59-a91d-199c5d608717",
+            "UUID": "914a39bc-7ec1-46ec-ba47-022fdb80d569",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/Math-Divide.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/Math-Divide.json",
@@ -2572,7 +2721,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/Math-Multiply.json": {
-            "UUID": "87cc354b-0070-4025-8ac8-60b16d79bb58",
+            "UUID": "421204c1-b3b7-4b1b-a1a4-387f521f3d25",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/Math-Multiply.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/Math-Multiply.json",
@@ -2612,7 +2761,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/Math-Subtract.json": {
-            "UUID": "a7445a1a-2539-492b-80f1-a9aa6e71db1d",
+            "UUID": "ba569438-d293-4b4f-ab68-293152921e15",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/Math-Subtract.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/Math-Subtract.json",
@@ -2652,7 +2801,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/PreciseMath-Add.json": {
-            "UUID": "a6d0e62d-565e-4a11-b9b3-7d80a800dcd8",
+            "UUID": "ac965127-af8e-4f16-92cc-8bcfd34b0a24",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/PreciseMath-Add.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/PreciseMath-Add.json",
@@ -2692,7 +2841,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/PreciseMath-Aggregate.json": {
-            "UUID": "a87ff01f-093c-4f1a-a415-7b9411d2f513",
+            "UUID": "899207a4-1196-4084-8637-8a2bedfbf873",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/PreciseMath-Aggregate.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/PreciseMath-Aggregate.json",
@@ -2732,7 +2881,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/PreciseMath-Divide.json": {
-            "UUID": "15d7de4f-c2f9-4317-959b-1dd0711fb689",
+            "UUID": "1bde64f9-3259-4d1c-88af-963c0d10a54b",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/PreciseMath-Divide.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/PreciseMath-Divide.json",
@@ -2772,7 +2921,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/PreciseMath-GroupValuesAndAggregate.json": {
-            "UUID": "646dc0ae-9bfe-4429-bc5c-becf07b3d395",
+            "UUID": "63dff3f7-ca84-4687-87e5-999e92e6ce1e",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/PreciseMath-GroupValuesAndAggregate.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/PreciseMath-GroupValuesAndAggregate.json",
@@ -2812,7 +2961,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/PreciseMath-Multiply.json": {
-            "UUID": "dc7011f0-b00c-4653-9893-a63e06cc85cb",
+            "UUID": "43dbc133-44da-413d-bd9d-1baee106fdbe",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/PreciseMath-Multiply.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/PreciseMath-Multiply.json",
@@ -2852,7 +3001,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/PreciseMath-Round.json": {
-            "UUID": "da9e236c-321d-4edc-ba53-988fff346208",
+            "UUID": "39774f38-721f-41be-bf77-c2395a107b4f",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/PreciseMath-Round.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/PreciseMath-Round.json",
@@ -2892,7 +3041,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/PreciseMath-SetPrecision.json": {
-            "UUID": "ad3378da-385e-460a-9025-6b75e5e17e99",
+            "UUID": "b0d8ab45-df88-4d6e-9937-ea6c648383e4",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/PreciseMath-SetPrecision.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/PreciseMath-SetPrecision.json",
@@ -2932,7 +3081,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/PreciseMath-SetRoundingMode.json": {
-            "UUID": "d3562502-a44b-4f68-abf9-1a77d2199cfa",
+            "UUID": "3d55b532-84e9-4356-bda9-9c61795c4b49",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/PreciseMath-SetRoundingMode.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/PreciseMath-SetRoundingMode.json",
@@ -2972,7 +3121,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/PreciseMath-Subtract.json": {
-            "UUID": "966b6785-52f2-44ff-beca-f523348acd27",
+            "UUID": "ad89b052-9c7b-4bc1-91ca-b4b82902aa17",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/PreciseMath-Subtract.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/PreciseMath-Subtract.json",
@@ -3012,7 +3161,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/PreciseMath-ToDecimalPlaces.json": {
-            "UUID": "0cfcd3a3-56e8-4753-83ff-f6863075a37a",
+            "UUID": "633b104e-af0c-4e31-a7b8-450c36d8717e",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/PreciseMath-ToDecimalPlaces.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/PreciseMath-ToDecimalPlaces.json",
@@ -3052,7 +3201,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/PreciseMath-ToSignificantDigits.json": {
-            "UUID": "22deb9f7-7a05-4885-b40f-a2dc8bdfbd19",
+            "UUID": "37f4c4eb-0c83-49cb-ae6c-dc1c6b083f48",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/PreciseMath-ToSignificantDigits.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/PreciseMath-ToSignificantDigits.json",
@@ -3092,7 +3241,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/Set-GroupValuesBy.json": {
-            "UUID": "6431905d-624e-4d13-bef0-bde92df8d4c8",
+            "UUID": "34fcc2fd-3c88-4f38-8fe1-e785489f3f70",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/Set-GroupValuesBy.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/Set-GroupValuesBy.json",
@@ -3132,7 +3281,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/String-Replace.json": {
-            "UUID": "c61856ed-5d02-4e59-98f1-936337965f17",
+            "UUID": "6937f8c0-d80f-4eee-9b56-9e7bd3f8be98",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/String-Replace.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/String-Replace.json",
@@ -3172,7 +3321,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/String-Substring.json": {
-            "UUID": "144a9762-9a70-4976-9c56-b277a94dbf63",
+            "UUID": "edfce04c-9253-4fab-8c25-33088355a975",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/String-Substring.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/String-Substring.json",
@@ -3212,7 +3361,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/String-Trim.json": {
-            "UUID": "6dae975f-eefe-4a0e-9a58-fd3cb9388904",
+            "UUID": "9626d600-a7dc-44f4-80ea-f81fc78008aa",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/String-Trim.json",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Operations/String-Trim.json",
@@ -3252,7 +3401,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/PreciseMath-Decimal.js": {
-            "UUID": "dbf79036-83e6-408a-8460-f54314d4f074",
+            "UUID": "d4453c52-a288-4646-ac25-d3490a893328",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/PreciseMath-Decimal.js",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/PreciseMath-Decimal.js",
@@ -3291,7 +3440,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Set.js": {
-            "UUID": "6c35c65f-859f-4da2-b4c1-1b06bdfdfd27",
+            "UUID": "887aa25d-2b5e-4273-907a-7b6c5f13dce5",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Set.js",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/Set.js",
@@ -3329,7 +3478,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/String.js": {
-            "UUID": "b013b113-258a-42a0-8b10-75c977d4224c",
+            "UUID": "66ad7827-aeb3-42ad-a2af-ff0eaa8335b0",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/String.js",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/source/InstructionSets/String.js",
@@ -3367,7 +3516,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/test/Elucidator-AbstractOperations_tests.js": {
-            "UUID": "eeacc03c-4b38-4a91-8097-a865a1da825f",
+            "UUID": "a0eeb21f-2c56-49eb-a850-61052b88bfb0",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/test/Elucidator-AbstractOperations_tests.js",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/test/Elucidator-AbstractOperations_tests.js",
@@ -3406,7 +3555,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/test/Elucidator-CustomSolvers_tests.js": {
-            "UUID": "4e6940eb-d33e-4b7d-a82e-c55dd8e80d14",
+            "UUID": "f6331504-1957-4dd6-9085-b372d2d51e44",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/test/Elucidator-CustomSolvers_tests.js",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/test/Elucidator-CustomSolvers_tests.js",
@@ -3445,7 +3594,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/test/Elucidator-InjectedSolvers_tests.js": {
-            "UUID": "6a9f601c-15ff-4ec4-86dc-3868af7d63a1",
+            "UUID": "edda7663-b639-4a22-adba-9717bea80c61",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/test/Elucidator-InjectedSolvers_tests.js",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/test/Elucidator-InjectedSolvers_tests.js",
@@ -3484,7 +3633,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/test/Elucidator-LogicOperations_tests.js": {
-            "UUID": "f3f65ba2-7529-4adf-9519-f6a9401a526c",
+            "UUID": "ffc38faa-27c9-4769-a156-6bad33ac2809",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/test/Elucidator-LogicOperations_tests.js",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/test/Elucidator-LogicOperations_tests.js",
@@ -3523,7 +3672,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/test/Elucidator-PrecisionSolvers_tests.js": {
-            "UUID": "4a3f2f56-8816-499d-be4f-8335557bb778",
+            "UUID": "333e73e5-d92b-4bd7-9c0a-df27595e0b82",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/test/Elucidator-PrecisionSolvers_tests.js",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/test/Elucidator-PrecisionSolvers_tests.js",
@@ -3562,7 +3711,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/test/Elucidator-Set_tests.js": {
-            "UUID": "f1a5a5b2-6c65-4e27-b588-a5cadc34cfe7",
+            "UUID": "9caee095-4e1c-400a-92bd-a116594eba08",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/test/Elucidator-Set_tests.js",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/test/Elucidator-Set_tests.js",
@@ -3601,7 +3750,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/test/Elucidator-SimpleSolvers_tests.js": {
-            "UUID": "1f52ad59-6e91-4b0b-933d-2725d11b64ac",
+            "UUID": "b23e37a2-1e05-4fef-aaac-102dedce2350",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/test/Elucidator-SimpleSolvers_tests.js",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/test/Elucidator-SimpleSolvers_tests.js",
@@ -3640,7 +3789,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/test/Elucidator-StringOperations_tests.js": {
-            "UUID": "65935092-5879-48a8-bc68-3fbaf88e7ccc",
+            "UUID": "d3b07729-694f-4edf-b91f-6a0d0b79b3af",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/test/Elucidator-StringOperations_tests.js",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/test/Elucidator-StringOperations_tests.js",
@@ -3679,7 +3828,7 @@
             }
         },
         "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/test/Elucidator_tests.js": {
-            "UUID": "65f1fbc1-51d8-4c67-bfa2-37f20e2b0103",
+            "UUID": "158dd4ae-ad54-4c2d-8446-97f2062b35c7",
             "Type": "URI",
             "Hash": "URI~CONTENT~FILE://Users/steven/Code/retold/modules/utility/elucidator/test/Elucidator_tests.js",
             "Path": "FILE://Users/steven/Code/retold/modules/utility/elucidator/test/Elucidator_tests.js",
