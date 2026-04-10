@@ -197,11 +197,11 @@ This sounds complicated and unnecessary.  This seems complicated and unneecessar
 
 # A Simple Example: RunCorpRun
 
-Let’s take a simple example.  We have our idea for a hot new startup: RunCorpRun.  We want to revolutionize the world of lap timing technology, leveraging a fusion of applied mathematical prowess and our vision for timer user experience previously unimagined by the human race.  This is going to be the best damn lap timer the technology has ever seen, simultaneously synergizing with every possible user group.
+Let's take a simple example.  We have our idea for a hot new startup: RunCorpRun.  We want to revolutionize the world of lap timing technology, leveraging a fusion of applied mathematical prowess and our vision for timer user experience previously unimagined by the human race.  This is going to be the best damn lap timer the technology has ever seen, simultaneously synergizing with every possible user group.
 
 ## Our Persona:
 
-Running coaches; typically 15-45 year old people with low to medium technical literacy.  They have a smart phone.  What’s important to them is quality running shoes, the smell of fresh air and crushing it on the clay or gravel.
+Running coaches; typically 15-45 year old people with low to medium technical literacy.  They have a smart phone.  What's important to them is quality running shoes, the smell of fresh air and crushing it on the clay or gravel.
 
 ## Our User Story:
 
@@ -215,19 +215,19 @@ As a running coach
 ## Our User Experience Vignette:
 
 1. Launch the RunCorpRun App
-2. Press “Start Timing”
-3. Press “Lap Complete” each time the “runner” passes the lap line on the “race track”
-4. Press “Done Timing” when the runner completes their final lap
+2. Press "Start Timing"
+3. Press "Lap Complete" each time the "runner" passes the lap line on the "race track"
+4. Press "Done Timing" when the runner completes their final lap
 
 As you can see, this is a very advanced user experience.
 
 ## Our Technical Solution
 
-When the user presses “Start Timing”, we set the Active Timer to 0 and clear any previously stored Lap Entries.  Further, we start a new timer that shows on the screen.
+When the user presses "Start Timing", we set the Active Timer to 0 and clear any previously stored Lap Entries.  Further, we start a new timer that shows on the screen.
 
-Whenever the user clicks “Lap Complete” or “Done Timing”, we must perform a set of calculations on a series of lap time(s) that the user has collected.
+Whenever the user clicks "Lap Complete" or "Done Timing", we must perform a set of calculations on a series of lap time(s) that the user has collected.
 
-We know it’s important to track average lap time for a runner as they loop around a track.  This is our zillion dollar app!  The data could be represented as such (with the units being seconds):
+We know it's important to track average lap time for a runner as they loop around a track.  This is our zillion dollar app!  The data could be represented as such (with the units being seconds):
 
 ### Basic Example Data
 
@@ -256,7 +256,7 @@ We know it’s important to track average lap time for a runner as they loop aro
 
 ### Our User Interface Calculation Code
 
-Triggered on the press of both the “Lap Complete” and “Done Timing” buttons, the following code is executed:
+Triggered on the press of both the "Lap Complete" and "Done Timing" buttons, the following code is executed:
 
 ```
 function calculateLapStatistics (Data)
@@ -310,11 +310,11 @@ It is an exciting day for RunCorpRun, launching our flagship lap tracking app.  
 
 ## Use Case Refinement
 
-After launch of any software, users start imagining and requesting features.  We have some decisions to make on what persona features we want in our app!  Our user persona was a bit too generic and the software didn’t hit the mark with a specific enough target market.  We haven't made our zillions yet.  Stopwatch technology is no longer valued as much as it used to be, we quietly lament.
+After launch of any software, users start imagining and requesting features.  We have some decisions to make on what persona features we want in our app!  Our user persona was a bit too generic and the software didn't hit the mark with a specific enough target market.  We haven't made our zillions yet.  Stopwatch technology is no longer valued as much as it used to be, we quietly lament.
 
 ### Cross Country
 
-The cross country runners have much longer laps, so showing them the results in number of seconds doesn’t make sense, and showing six significant digits is not useful to their users.  They would rather see minutes and seconds, with 2 digits of precision on the seconds.
+The cross country runners have much longer laps, so showing them the results in number of seconds doesn't make sense, and showing six significant digits is not useful to their users.  They would rather see minutes and seconds, with 2 digits of precision on the seconds.
 
 ### Sprinters
 
@@ -334,7 +334,7 @@ The paving companies are eager to use the software for data analysis, but want t
 
 TotalDistance = StrideLength * LapCount
 
-Since turnaround time is being considered as a part of the lap time, adding this one simple value means they don’t need to export the data to excel and track it somewhere else.
+Since turnaround time is being considered as a part of the lap time, adding this one simple value means they don't need to export the data to excel and track it somewhere else.
 
 ## RunCorpRun Version 2.0
 
@@ -344,7 +344,7 @@ Now that we have some new use cases, our design and development team is eager to
 
 Much as we want to use a Data Access Layer (DAL) to abstract away the complexity of persistence and access of data, we want a Solution Abstraction Library (SAL) to prevent spaghetti code on these mathematical solution features as we add complexity and branching.
 
-When we use the word “Solution”, we don’t mean it in the “Software Solution” sense.  It is meant to convey “Mathematical or Logical Solution” to a problem space with some readable input state, expecting some output state.
+When we use the word "Solution", we don't mean it in the "Software Solution" sense.  It is meant to convey "Mathematical or Logical Solution" to a problem space with some readable input state, expecting some output state.
 
 This is because right now, the feature requests from our various user personas would most likely be solved by adding a muddy blend of configuration, code in the user interface, new state in the data object and code in this solution function.
 
