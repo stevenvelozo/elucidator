@@ -1,5 +1,7 @@
 # Structural Solver
 
+> **[&#9654; Read the Elucidator Documentation](https://stevenvelozo.github.io/elucidator/)** &mdash; interactive docs with the full API reference.
+
 This library is a multivariate solver with audit-ability and comprehensibility in mind.  It was built on the premise that we should be decoupling complex solution logic from interactive software in the same way we decouple complex database logic.
 
 Said another way:
@@ -387,8 +389,3 @@ The below solver configuration matches the code above, and allows for variations
 	]
 }
 ```
-
-
-
-
-
