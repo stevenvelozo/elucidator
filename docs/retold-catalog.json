@@ -1,5 +1,5 @@
 {
-	"Generated": "2026-05-22T05:48:11.411Z",
+	"Generated": "2026-05-31T01:44:06.405Z",
 	"Mode": "module",
 	"GitHubOrg": "stevenvelozo",
 	"DefaultBranch": "master",
@@ -9,13 +9,46 @@
 		"Group": "",
 		"Branch": "master",
 		"HasDocs": true,
-		"HasCover": false,
-		"Sidebar": [],
+		"HasCover": true,
+		"Sidebar": [
+			{
+				"Title": "Getting Started",
+				"Children": [
+					{
+						"Title": "Introduction",
+						"Path": "README.md"
+					},
+					{
+						"Title": "Quickstart",
+						"Path": "quickstart.md"
+					}
+				]
+			},
+			{
+				"Title": "Reference",
+				"Children": [
+					{
+						"Title": "Operations",
+						"Path": "operations.md"
+					},
+					{
+						"Title": "API",
+						"Path": "api.md"
+					}
+				]
+			}
+		],
 		"DocFiles": [
 			".nojekyll",
+			"README.md",
 			"_brand.json",
+			"_cover.md",
+			"_sidebar.md",
 			"_version.json",
+			"api.md",
 			"index.html",
+			"operations.md",
+			"quickstart.md",
 			"retold-catalog.json",
 			"retold-keyword-index.json"
 		]
