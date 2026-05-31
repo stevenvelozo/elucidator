@@ -165,8 +165,8 @@ class Elucidator extends libFableServiceProviderBase
 			}
 
 			if ((typeof(pOutputObject) != 'object')
-				&& (typeof(tmpOutputHashMapping) == 'undefined') 
-				&& (typeof(tmpInputHashMapping) != 'undefined'))
+				&& (typeof(tmpSolutionContext.OutputHashMapping) == 'undefined')
+				&& (typeof(tmpSolutionContext.InputHashMapping) != 'undefined'))
 			{
 				// Reuse the input hash mapping if:
 				//   1) we auto-mapped the input hash mapping to the output because only an input object was supplied
