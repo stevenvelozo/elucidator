@@ -1,12 +1,12 @@
 # Elucidator
 
-> Structural Solver &mdash; a multivariate solver service and API.
+> Structural Solver - a multivariate solver service and API.
 
 Elucidator is a multivariate solver built with audit-ability and comprehensibility in mind. It was built on the premise that complex solution logic should be decoupled from interactive software in the same way we decouple complex database logic.
 
 > With a Data Access Library (DAL) pattern it should be trivial to change the back-end database engine, indexing strategy and schema without having to rewrite front-end software.
 
-Elucidator applies the same idea to computation &mdash; a **Solution Abstraction Library** (SAL):
+Elucidator applies the same idea to computation - a **Solution Abstraction Library** (SAL):
 
 > With a Solution Abstraction Library pattern it should be trivial to change the underlying method for computing composite values without having to rewrite front-end software.
 
@@ -63,7 +63,7 @@ A Step maps the operation's data addresses onto the short hashes its instruction
 }
 ```
 
-You can also register your own operations shaped to your data &mdash; see the [Quickstart](quickstart.md).
+You can also register your own operations shaped to your data - see the [Quickstart](quickstart.md).
 
 ## Documentation
 

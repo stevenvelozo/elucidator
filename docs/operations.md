@@ -2,7 +2,7 @@
 
 This is the complete reference for the operations Elucidator registers by default. Operations are grouped into **namespaces**. You call one with `solveInternalOperation(namespace, operation, dataObject)`; the result is written back into `dataObject` at the operation's output address.
 
-Namespace and operation hashes are matched **case-insensitively** &mdash; `RectangleArea`, `rectanglearea` and `RECTANGLEAREA` all resolve to the same operation.
+Namespace and operation hashes are matched **case-insensitively** - `RectangleArea`, `rectanglearea` and `RECTANGLEAREA` all resolve to the same operation.
 
 The six default namespaces are: `Math`, `PreciseMath`, `Geometry`, `Logic`, `String` and `Set`.
 
@@ -92,7 +92,7 @@ _Elucidator.solveInternalOperation('Geometry', 'RectangleArea', tmpData);
 // tmpData === { Width: 10, Height: 2, Area: '20', Ratio: '5' }
 ```
 
-> Geometry registers **no instructions of its own** &mdash; `RectangleArea` is an example of an operation built entirely from other namespaces' instructions.
+> Geometry registers **no instructions of its own** - `RectangleArea` is an example of an operation built entirely from other namespaces' instructions.
 
 ## Logic
 
@@ -179,10 +179,10 @@ _Elucidator.solveInternalOperation('Set', 'GroupValuesBy', tmpData);
 
 ## Instructions vs. Operations
 
-Every operation in the tables above is a thin wrapper over a same-named **instruction** that does the work. Instructions are the endpoints of a solve &mdash; they never recurse. A few namespaces register extra instructions beyond their operations:
+Every operation in the tables above is a thin wrapper over a same-named **instruction** that does the work. Instructions are the endpoints of a solve - they never recurse. A few namespaces register extra instructions beyond their operations:
 
 - **Math** and **PreciseMath** register short instruction aliases: `sub` (subtract), `mul` (multiply), `div` (divide). These are usable inside a Step's `Instruction` field but have no stand-alone operation.
-- **PreciseMath** registers a `tofraction` instruction (convert a value to its `numerator/denominator` string form). It has **no** corresponding operation &mdash; use it as a Step instruction only.
+- **PreciseMath** registers a `tofraction` instruction (convert a value to its `numerator/denominator` string form). It has **no** corresponding operation - use it as a Step instruction only.
 - **Logic** and **Set** register the base `noop` instruction (do nothing), which `Logic.If` uses as the default branch target.
 
 See [API](api.md) for how Steps reference instructions and operations.

@@ -1,6 +1,6 @@
 # Elucidator
 
-> Structural Solver &mdash; a multivariate solver service and API built for audit-ability and comprehensibility.
+> Structural Solver - a multivariate solver service and API built for audit-ability and comprehensibility.
 
 - Decouple complex solution logic from your UI the way a DAL decouples data access
 - Compose solvers from built-in Math, PreciseMath, Geometry, Logic, String and Set operations

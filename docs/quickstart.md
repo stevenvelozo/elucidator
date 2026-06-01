@@ -41,7 +41,7 @@ Namespace and operation hashes are matched case-insensitively, so `'Math'` / `'m
 
 ### Reading the Solution Log
 
-The returned context carries a human-readable `SolutionLog` &mdash; this is the audit trail of the run. For the `Math.Add` operation above it contains:
+The returned context carries a human-readable `SolutionLog` - this is the audit trail of the run. For the `Math.Add` operation above it contains:
 
 ```javascript
 tmpSolution.SolutionLog[0];   // 'Add a and b, storing the value in x.'
@@ -129,7 +129,7 @@ _Elucidator.solveInternalOperation('Bill', 'Tally', tmpSecondBill);
 // tmpSecondBill.BillTotal === 2010
 ```
 
-The point of the indirection is that you can swap or add `Steps` &mdash; or register an alternate operation under the same inputs &mdash; without rewriting the code that calls `solveInternalOperation`.
+The point of the indirection is that you can swap or add `Steps` - or register an alternate operation under the same inputs - without rewriting the code that calls `solveInternalOperation`.
 
 ## Constructor-Time Operations
 
@@ -175,11 +175,11 @@ _Elucidator.solveInternalOperation('Custom', 'TallyBill', tmpData);
 
 ## Next Steps
 
-- [Operations](operations.md) &mdash; the complete reference for every built-in operation, grouped by namespace
-- [API](api.md) &mdash; the Elucidator service class, its methods, and the Operation / Step schema
+- [Operations](operations.md) - the complete reference for every built-in operation, grouped by namespace
+- [API](api.md) - the Elucidator service class, its methods, and the Operation / Step schema
 
 ## Related Modules
 
-- [precedent](https://fable-retold.github.io/precedent/) &mdash; the meta-templating engine behind the `{{Name:}}` / `{{InputValue:}}` / `{{OutputValue:}}` solution-log substitutions
-- [manyfest](https://fable-retold.github.io/manyfest/) &mdash; the object description and address-navigation library Elucidator uses to read and write values by hash and address
-- [fable](https://fable-retold.github.io/fable/) &mdash; the service dependency-injection framework Elucidator is built on
+- [precedent](https://fable-retold.github.io/precedent/) - the meta-templating engine behind the `{{Name:}}` / `{{InputValue:}}` / `{{OutputValue:}}` solution-log substitutions
+- [manyfest](https://fable-retold.github.io/manyfest/) - the object description and address-navigation library Elucidator uses to read and write values by hash and address
+- [fable](https://fable-retold.github.io/fable/) - the service dependency-injection framework Elucidator is built on

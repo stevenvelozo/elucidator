@@ -22,7 +22,7 @@ new Elucidator(pFable, pOptions, pServiceHash)
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
-| `pFable` | object | A Fable instance. Required &mdash; Elucidator uses Fable to instantiate its `Manifest` ([manyfest](https://fable-retold.github.io/manyfest/)) and `MetaTemplate` ([precedent](https://fable-retold.github.io/precedent/)) helpers per solve. |
+| `pFable` | object | A Fable instance. Required - Elucidator uses Fable to instantiate its `Manifest` ([manyfest](https://fable-retold.github.io/manyfest/)) and `MetaTemplate` ([precedent](https://fable-retold.github.io/precedent/)) helpers per solve. |
 | `pOptions` | object | Optional service options. If it contains an `OperationSet` object, each property is registered as a custom operation (see [`OperationSet`](#operationset-option) below). |
 | `pServiceHash` | string | Optional service hash, passed through to the Fable service base. |
 
@@ -166,10 +166,10 @@ An operation is a plain JavaScript object (or JSON file). These are the keys Elu
 | Key | Type | Description |
 | --- | ---- | ----------- |
 | `Description` | object | **Required.** Carries `Namespace`, `Operation` (used as the call `Hash`) and an optional `Synopsis`. |
-| `Inputs` | object | Map of input address &rarr; descriptor. Each descriptor has a `Hash`, an optional `Type`, and an optional `Name`. Defaults to `{}`. |
-| `Outputs` | object | Map of output address &rarr; descriptor, same shape as `Inputs`. Defaults to `{}`. |
+| `Inputs` | object | Map of input address -> descriptor. Each descriptor has a `Hash`, an optional `Type`, and an optional `Name`. Defaults to `{}`. |
+| `Outputs` | object | Map of output address -> descriptor, same shape as `Inputs`. Defaults to `{}`. |
 | `Steps` | array | The ordered list of [Steps](#step-schema) the solve runs. Defaults to `[]`. |
-| `Log` | object | Optional `PreOperation` / `PostOperation` templated message(s) &mdash; a string or an array of strings &mdash; pushed into the solution log. |
+| `Log` | object | Optional `PreOperation` / `PostOperation` templated message(s) - a string or an array of strings - pushed into the solution log. |
 | `InputHashTranslationTable` | object | Optional solution-wide `{ "<hash>": "<address>" }` translation applied to inputs. |
 | `OutputHashTranslationTable` | object | Optional solution-wide translation applied to outputs. |
 
@@ -182,9 +182,9 @@ Each entry in `Steps` either runs an instruction or recurses into another operat
 | Key | Type | Description |
 | --- | ---- | ----------- |
 | `Namespace` | string | The namespace of the instruction or operation this Step invokes. |
-| `Instruction` | string | The instruction hash to run. **Instructions never recurse** &mdash; they are the endpoints of a solve. |
+| `Instruction` | string | The instruction hash to run. **Instructions never recurse** - they are the endpoints of a solve. |
 | `Operation` | string \| object | The operation hash to recurse into, or an inline operation object. Mutually exclusive with `Instruction` in practice. |
-| `InputHashAddressMap` | object | `{ "<instruction-hash>": "<operation-address>" }` &mdash; binds the operation's data addresses onto the hashes the instruction reads. |
+| `InputHashAddressMap` | object | `{ "<instruction-hash>": "<operation-address>" }` - binds the operation's data addresses onto the hashes the instruction reads. |
 | `OutputHashAddressMap` | object | The same idea for where the instruction writes its result. |
 
 A Step that runs an instruction:
@@ -269,5 +269,5 @@ let add = (pOperation) =>
 
 ## See Also
 
-- [Quickstart](quickstart.md) &mdash; install, construct, and run your first solver
-- [Operations](operations.md) &mdash; the complete built-in operation reference
+- [Quickstart](quickstart.md) - install, construct, and run your first solver
+- [Operations](operations.md) - the complete built-in operation reference

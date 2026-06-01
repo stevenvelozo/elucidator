@@ -1,6 +1,6 @@
 # Structural Solver
 
-> **[&#9654; Read the Elucidator Documentation](https://stevenvelozo.github.io/elucidator/)** &mdash; interactive docs with the full API reference.
+> **[Read the Elucidator Documentation](https://stevenvelozo.github.io/elucidator/)** - interactive docs with the full API reference.
 
 This library is a multivariate solver with audit-ability and comprehensibility in mind.  It was built on the premise that we should be decoupling complex solution logic from interactive software in the same way we decouple complex database logic.
 
@@ -56,7 +56,7 @@ What an insanely complex way to add two numbers!
 
 ### Initializing the Library as a Fable Service
 
-Fable services are meant to be composable single-purpose modules.  Service in this case doesn't mean API or web service; it means there are shared functionality with well defined interfaces.  For instance, this library leverages a few fable services to function: logging, object manifest navigation and metatemplating.
+Fable services are meant to be composable single-purpose modules.  Service in this case doesn't mean API or web service; it means there are shared functionality with well defined interfaces.  For instance, this library uses a few fable services to function: logging, object manifest navigation and metatemplating.
 
 ```javascript
 const libFable = require('fable');
@@ -84,7 +84,7 @@ Testing instruction [PreciseMath]::[Add] with the following data: {"a":10,"b":3}
 Outcome: {"a":10,"b":3,"x":"13"}
 ```
 
-Still an insanely complex way to add two numbers.  Anyhow, there are a number of mechanisms for adding the library as a fable service and initializing it (including keeping track of multiple solvers that interact with each other).  Leveraging fable services are documented in the fable documentation; either of these initialization methods work.
+Still an insanely complex way to add two numbers.  Anyhow, there are a number of mechanisms for adding the library as a fable service and initializing it (including keeping track of multiple solvers that interact with each other).  Using fable services are documented in the fable documentation; either of these initialization methods work.
 
 ## Operations and Instructions
 
@@ -95,7 +95,7 @@ A Solution Abstraction is made up of multiple Instructions and/or Operations, ch
 | Description | Identifies the operation.  It carries a `Namespace`, an `Operation` name (used as the `Hash` to call it) and an optional `Synopsis`.  The `Hash` is what you pass to `solveInternalOperation`. |
 | Inputs  | Inputs are the variable inputs for a specific operation.  Each input is keyed by an address and described with a `Hash` identifier, a `Type`, and an optional `Default`.  For instance a simple _Rectangle Area Calculation_ might have the inputs of `Width` and `Height`. |
 | Outputs | Outputs are the values that are generated when the Operation has completed.  For our _Rectangle Area Calculation_, it might output `Area` and `Ratio`.  Outputs also have types. |
-| Steps | Operations are made up of a series of chained-together Steps.  Each Step either runs a built-in `Instruction` (an endpoint that does the actual work) or recurses into another `Operation`.  For our _Rectangle Area Calculation_ a Step would leverage the `PreciseMath` `multiply` Instruction to multiply `Width` by `Height`.  Mixed with Control Flow operations (branching based on basic conditions), solutions can do some pretty complex stuff. |
+| Steps | Operations are made up of a series of chained-together Steps.  Each Step either runs a built-in `Instruction` (an endpoint that does the actual work) or recurses into another `Operation`.  For our _Rectangle Area Calculation_ a Step would use the `PreciseMath` `multiply` Instruction to multiply `Width` by `Height`.  Mixed with Control Flow operations (branching based on basic conditions), solutions can do some pretty complex stuff. |
 | Log | Optional `PreOperation` / `PostOperation` templated messages, written into the solution log so the run is auditable. |
 
 When to use an instruction versus operation: you should in general use the instruction as a step if one is available.  Chaining built-in operations together is possible, but, requires great care to make the automatic messaging work.  If you are composing your own operations, shaped to your data, use them as you wish!
@@ -104,10 +104,10 @@ When to use an instruction versus operation: you should in general use the instr
 
 A Step maps the operation's input/output addresses onto the short hashes the underlying instruction expects.  The two keys that do this are:
 
-- **`InputHashAddressMap`** &mdash; an object of `{ "<instruction-hash>": "<operation-address>" }` pairs.  The `PreciseMath` `multiply` instruction reads `a` and `b`, so a Step maps `{ "a": "Width", "b": "Height" }`.
-- **`OutputHashAddressMap`** &mdash; the same idea for where the instruction writes its result.  `multiply` writes `x`, so `{ "x": "Area" }` lands the result in `Area`.
+- **`InputHashAddressMap`** - an object of `{ "<instruction-hash>": "<operation-address>" }` pairs.  The `PreciseMath` `multiply` instruction reads `a` and `b`, so a Step maps `{ "a": "Width", "b": "Height" }`.
+- **`OutputHashAddressMap`** - the same idea for where the instruction writes its result.  `multiply` writes `x`, so `{ "x": "Area" }` lands the result in `Area`.
 
-Both are plain key/value objects.  (An earlier draft of this document showed these as bare-key arrays such as `{ "Inputs.Width", "Inputs.Height" }` &mdash; that is not valid JSON and will not run.)
+Both are plain key/value objects.  (An earlier draft of this document showed these as bare-key arrays such as `{ "Inputs.Width", "Inputs.Height" }` - that is not valid JSON and will not run.)
 
 ### Example Operation: Rectangle Area Calculation
 
@@ -271,7 +271,7 @@ This sounds complicated and unnecessary.  This seems complicated and unneecessar
 
 # A Simple Example: RunCorpRun
 
-Let's take a simple example.  We have our idea for a hot new startup: RunCorpRun.  We want to revolutionize the world of lap timing technology, leveraging a fusion of applied mathematical prowess and our vision for timer user experience previously unimagined by the human race.  This is going to be the best damn lap timer the technology has ever seen, simultaneously synergizing with every possible user group.
+Let's take a simple example.  We have our idea for a hot new startup: RunCorpRun.  We want to revolutionize the world of lap timing technology, using a fusion of applied mathematical prowess and our vision for timer user experience previously unimagined by the human race.  This is going to be the best damn lap timer the technology has ever seen, simultaneously synergizing with every possible user group.
 
 ## Our Persona:
 
@@ -426,7 +426,7 @@ Worse yet the more times we go through these iterations, the more complex a mess
 
 ## An Expression of Our RunCorpRun Solver v1
 
-The below solver configuration captures the first piece of the v1 code above: it sums the individual `LapTime` values into a single `TotalTime`, leaving the data object ready for downstream average / min / max steps.  The Step uses `InputHashAddressMap` / `OutputHashAddressMap` to bind the operation's data addresses onto the instruction hashes &mdash; `a` is the aggregate's input, `x` is its result.  Note the `Laps[].LapTime` address: the `[]` segment tells [manyfest](https://fable-retold.github.io/manyfest/) to collect that property from every element of the `Laps` array before aggregating.
+The below solver configuration captures the first piece of the v1 code above: it sums the individual `LapTime` values into a single `TotalTime`, leaving the data object ready for downstream average / min / max steps.  The Step uses `InputHashAddressMap` / `OutputHashAddressMap` to bind the operation's data addresses onto the instruction hashes - `a` is the aggregate's input, `x` is its result.  Note the `Laps[].LapTime` address: the `[]` segment tells [manyfest](https://fable-retold.github.io/manyfest/) to collect that property from every element of the `Laps` array before aggregating.
 
 ```json
 {
@@ -465,7 +465,7 @@ The below solver configuration captures the first piece of the v1 code above: it
 }
 ```
 
-Running this against the lap data above sets `TotalTime` to `"179.719"`.  As the use cases multiply (precise vs. rounded output, grouped aggregation, branching by runner type), you swap or add Steps &mdash; or register an alternate operation under the same inputs &mdash; without rewriting the user-interface code that calls `solveInternalOperation('RunCorpRun', 'LapStatistics', tmpData)`.
+Running this against the lap data above sets `TotalTime` to `"179.719"`.  As the use cases multiply (precise vs. rounded output, grouped aggregation, branching by runner type), you swap or add Steps - or register an alternate operation under the same inputs - without rewriting the user-interface code that calls `solveInternalOperation('RunCorpRun', 'LapStatistics', tmpData)`.
 
 ## Custom Solvers
 
@@ -524,9 +524,9 @@ See the [Quickstart](https://stevenvelozo.github.io/elucidator/#/quickstart.md) 
 
 ## Related Modules
 
-- [precedent](https://fable-retold.github.io/precedent/) &mdash; the meta-templating engine that drives Elucidator's `{{Name:}}` / `{{InputValue:}}` / `{{OutputValue:}}` log substitutions.
-- [manyfest](https://fable-retold.github.io/manyfest/) &mdash; the object description / address navigation library Elucidator uses to read and write values by hash and address.
-- [fable](https://fable-retold.github.io/fable/) &mdash; the service dependency-injection framework Elucidator is built on.
+- [precedent](https://fable-retold.github.io/precedent/) - the meta-templating engine that drives Elucidator's `{{Name:}}` / `{{InputValue:}}` / `{{OutputValue:}}` log substitutions.
+- [manyfest](https://fable-retold.github.io/manyfest/) - the object description / address navigation library Elucidator uses to read and write values by hash and address.
+- [fable](https://fable-retold.github.io/fable/) - the service dependency-injection framework Elucidator is built on.
 
 ## License
 
