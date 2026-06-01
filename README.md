@@ -426,7 +426,7 @@ Worse yet the more times we go through these iterations, the more complex a mess
 
 ## An Expression of Our RunCorpRun Solver v1
 
-The below solver configuration captures the first piece of the v1 code above: it sums the individual `LapTime` values into a single `TotalTime`, leaving the data object ready for downstream average / min / max steps.  The Step uses `InputHashAddressMap` / `OutputHashAddressMap` to bind the operation's data addresses onto the instruction hashes - `a` is the aggregate's input, `x` is its result.  Note the `Laps[].LapTime` address: the `[]` segment tells [manyfest](https://fable-retold.github.io/manyfest/) to collect that property from every element of the `Laps` array before aggregating.
+The below solver configuration captures the first piece of the v1 code above: it sums the individual `LapTime` values into a single `TotalTime`, leaving the data object ready for downstream average / min / max steps.  The Step uses `InputHashAddressMap` / `OutputHashAddressMap` to bind the operation's data addresses onto the instruction hashes - `a` is the aggregate's input, `x` is its result.  Note the `Laps[].LapTime` address: the `[]` segment tells [manyfest](https://github.com/fable-retold/manyfest) to collect that property from every element of the `Laps` array before aggregating.
 
 ```json
 {
@@ -524,9 +524,9 @@ See the [Quickstart](https://stevenvelozo.github.io/elucidator/#/quickstart.md) 
 
 ## Related Modules
 
-- [precedent](https://fable-retold.github.io/precedent/) - the meta-templating engine that drives Elucidator's `{{Name:}}` / `{{InputValue:}}` / `{{OutputValue:}}` log substitutions.
-- [manyfest](https://fable-retold.github.io/manyfest/) - the object description / address navigation library Elucidator uses to read and write values by hash and address.
-- [fable](https://fable-retold.github.io/fable/) - the service dependency-injection framework Elucidator is built on.
+- [precedent](https://github.com/fable-retold/precedent) - the meta-templating engine that drives Elucidator's `{{Name:}}` / `{{InputValue:}}` / `{{OutputValue:}}` log substitutions.
+- [manyfest](https://github.com/fable-retold/manyfest) - the object description / address navigation library Elucidator uses to read and write values by hash and address.
+- [fable](https://github.com/fable-retold/fable) - the service dependency-injection framework Elucidator is built on.
 
 ## License
 
